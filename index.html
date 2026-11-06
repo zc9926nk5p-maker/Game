@@ -172,7 +172,7 @@ tr.me td:first-child{color:var(--ink)}
 .places button b{display:block;font:800 24px "Big Shoulders Display",Impact,sans-serif}
 .places button.fit{border-color:var(--win)}
 .best{display:grid;grid-template-columns:24px 1fr auto;gap:8px;padding:7px 0;border-top:1px solid var(--line);font-size:14px;text-align:left}
-.disc .spr{width:118%;height:118%;object-fit:contain;image-rendering:pixelated;margin-top:-5px}
+.disc .spr{width:150%;height:150%;object-fit:contain;image-rendering:pixelated;margin-top:-12px}
 .disc .rb{position:absolute;bottom:-5px;left:-8px;min-width:22px;height:18px;padding:0 3px;border-radius:9px;background:rgba(10,20,14,.85);color:#fff;font:800 13px/18px "Big Shoulders Display",Impact,sans-serif;text-align:center}
 img.spr{image-rendering:pixelated;object-fit:contain;flex:none}
 .feed{display:grid;grid-template-columns:40px 1fr auto;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}
@@ -823,6 +823,10 @@ html[data-skin="pixel"] .tbopt{border:3px solid #c8d0dc;border-radius:8px;backgr
 html[data-skin="pixel"] .bpcardme{border:3px solid var(--line)!important}
 html[data-skin="pixel"] .mtag{border-radius:3px}
 .pxspr{image-rendering:pixelated;image-rendering:crisp-edges;object-fit:contain}
+.disc:has(img.spr){transition:background .2s}
+html:not([data-tokbg="type"]) .disc:has(img.spr){border-color:transparent;box-shadow:none}
+html[data-tokbg="none"] .disc:has(img.spr){background:transparent}html[data-tokbg="none"] .disc img.spr{width:175%;height:175%;margin-top:-18px;filter:drop-shadow(0 2px 0 rgba(0,0,0,.35))}
+html[data-tokbg="light"] .disc:has(img.spr){background:#f4f6f8e6}html[data-tokbg="dark"] .disc:has(img.spr){background:#15181fe6}
 </style>
 </head>
 <body>
@@ -830,7 +834,8 @@ html[data-skin="pixel"] .mtag{border-radius:3px}
 <div id="sheet"></div>
 <script>
 function getSkin(){try{return localStorage.getItem("pokefc_skin")||"classic";}catch(e){return "classic";}}function getPxNight(){try{return localStorage.getItem("pokefc_pxnight")||"black";}catch(e){return "black";}}
-function applySkin(){const r=document.documentElement,sk=getSkin();if(sk==="pixel")r.dataset.skin="pixel";else delete r.dataset.skin;r.dataset.pxnight=getPxNight();}
+function getTokBg(){try{return localStorage.getItem("pokefc_tokbg")||"none";}catch(e){return "none";}}
+function applySkin(){const r=document.documentElement,sk=getSkin();if(sk==="pixel")r.dataset.skin="pixel";else delete r.dataset.skin;r.dataset.pxnight=getPxNight();r.dataset.tokbg=getTokBg();}
 
 "use strict";
 /* ---------- Pokédex data: Gen 1–4 (Gen 4-era typings). Name|Types|HP Atk Def SpA SpD Spe|L=legendary ---------- */
@@ -1742,6 +1747,7 @@ function homeSettingsHTML(){return `<div class="small muted" style="margin:12px 
 function themeChips(){const sk=getSkin(),pn=getPxNight();return `<div class="segs" role="radiogroup">${["auto","light","dark"].map(t=>`<button class="seg ${getTheme()===t?"on":""}" data-act="theme" data-th="${t}">${{auto:"Match phone",light:"Light",dark:"Dark"}[t]}</button>`).join("")}</div>
     <div class="small muted" style="margin:10px 2px 0">Style</div><div class="segs" role="radiogroup" style="margin-top:4px">${[["classic","Classic"],["pixel","Pixel"]].map(([k,l])=>`<button class="seg ${sk===k?"on":""}" data-act="skin" data-sk="${k}">${l}</button>`).join("")}</div>
     <div class="small muted" style="margin:10px 2px 0">Player icons</div><div class="segs" role="radiogroup" style="margin-top:4px">${[["auto","Match style"],["badge","Type badges"],["sprite","Pixel sprites"]].map(([k,l])=>`<button class="seg ${iconMode()===k?"on":""}" data-act="iconset" data-v="${k}">${l}</button>`).join("")}</div>
+    <div class="small muted" style="margin:10px 2px 0">Pitch token background (with sprites)</div><div class="segs" role="radiogroup" style="margin-top:4px">${[["none","None"],["light","Light"],["dark","Dark"],["type","Type colour"]].map(([k,l])=>`<button class="seg ${getTokBg()===k?"on":""}" data-act="tokbg" data-v="${k}">${l}</button>`).join("")}</div>
     ${sk==="pixel"?`<div class="small muted" style="margin:10px 2px 0">Night colours (Pixel, dark mode)</div><div class="segs" role="radiogroup" style="margin-top:4px">${[["black","Black"],["navy","Navy"]].map(([k,l])=>`<button class="seg ${pn===k?"on":""}" data-act="pxnight" data-pn="${k}">${l}</button>`).join("")}</div>`:""}`;}
 
 const EMB={Normal:'<circle cx="12" cy="12" r="6"/>',
@@ -1766,7 +1772,7 @@ const FORM_PRE=/^(Alolan|Galarian|Hisuian|Paldean|Heat|Wash|Frost|Fan|Mow|Sandy|
 const baseName=n=>n.replace(FORM_PRE,"").replace(FORM_SUF,"");
 function sprSrc(s,sh){if(!SPRITES)return null;if(SPR_MODE==="name")return {a:`sprites/${slug(s.n)}.png`,b:""};if(SPR_MODE==="zip"){const id=DEXID&&DEXID[slug(baseName(s.n))],z=window.ZIPSPR;if(!id||!z||!z.n[id])return null;return sh&&z.s[id]?{a:z.s[id],b:z.n[id]}:{a:z.n[id],b:""};}
   const id=DEXID&&DEXID[slug(baseName(s.n))];if(!id)return null;const n=`${SPR_BASE}${id}.png`;return sh?{a:`${SPR_BASE}shiny/${id}.png`,b:n}:{a:n,b:""};}
-function face(s,sz,sh){const r=sprSrc(s,sh);if(!r&&useSprites()&&s&&s.n)return pxImg(s,sz||24,sh);return r?`<img class="spr" src="${r.a}" alt="" width="${sz}" height="${sz}" loading="lazy" data-alt="${r.b}" data-fb="${esc(useSprites()&&s&&s.n?pxImg(s,sz,sh):emblem(s.t[0],sz))}" onerror="if(this.dataset.alt){this.src=this.dataset.alt;this.dataset.alt='';}else this.outerHTML=this.dataset.fb">`:emblem(s.t[0],sz);}
+const SPR_UP=1.35;function face(s,sz,sh){const r=sprSrc(s,sh),z=Math.round((sz||24)*SPR_UP),mg=Math.round((z-(sz||24))/2);if(!r&&useSprites()&&s&&s.n)return pxImg(s,z,sh).replace("<img ",`<img style="margin:-${mg}px 0" `);return r?`<img class="spr" src="${r.a}" alt="" width="${z}" height="${z}" style="margin:-${mg}px 0" loading="lazy" data-alt="${r.b}" data-fb="${esc(useSprites()&&s&&s.n?pxImg(s,sz,sh):emblem(s.t[0],sz))}" onerror="if(this.dataset.alt){this.src=this.dataset.alt;this.dataset.alt='';}else this.outerHTML=this.dataset.fb">`:emblem(s.t[0],sz);}
 function discInner(s,r,sh){const x=sprSrc(s,sh);if(!x&&useSprites()&&s&&s.n)return `<img class="spr pxspr" src="${pxSprite(s,sh)}" alt=""><span class="rb">${r}</span>`;return x?`<img class="spr" src="${x.a}" alt="" data-alt="${x.b}" data-px="${useSprites()&&s&&s.n?pxSprite(s,sh):""}" onerror="if(this.dataset.alt){this.src=this.dataset.alt;this.dataset.alt='';}else if(this.dataset.px){this.src=this.dataset.px;this.dataset.px='';this.classList.add('pxspr');}else this.remove()"><span class="rb">${r}</span>`:r;}
 function emblem(t,sz){sz=sz||22;return `<span class="emb ${DARKTXT.has(t)?"dk":""}" style="--c:${TC[t]};width:${sz}px;height:${sz}px" title="${t}"><svg viewBox="0 0 24 24" style="width:${Math.round(sz*.6)}px;height:${Math.round(sz*.6)}px" aria-hidden="true">${EMB[t]}</svg></span>`;}
 /* spinner: generation + a type that exists in that generation */
@@ -4997,6 +5003,7 @@ document.addEventListener("click",e=>{
       userDraftPick(d.chosen,z,k);if(state.phase!=="fantasy")toast("Draft complete. Check your squad, then kick off.");render();window.scrollTo(0,0);break;}
     case "theme":applyTheme(el.dataset.th);render();break;
     case "iconset":try{localStorage.setItem("pokefc_icons",el.dataset.v);}catch(e){}render();if(sheet)renderSheet();break;
+    case "tokbg":try{localStorage.setItem("pokefc_tokbg",el.dataset.v);}catch(e){}applySkin();render();if(sheet)renderSheet();break;
     case "skin":try{localStorage.setItem("pokefc_skin",el.dataset.sk);}catch(e){}applySkin();render();if(sheet)renderSheet();break;
     case "pxnight":try{localStorage.setItem("pokefc_pxnight",el.dataset.pn);}catch(e){}applySkin();render();if(sheet)renderSheet();break;
     case "themeq":applyTheme(isDark()?"light":"dark");render();break;
