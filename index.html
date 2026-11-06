@@ -13,7 +13,7 @@
 <title>Pocket Pitch</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Figtree:wght@400;500;600;700&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Figtree:wght@400;500;600;700&family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Pixelify+Sans:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&text=0123456789%25%E2%82%BD%E2%80%93-%2B.%2C%3A%E2%80%B2%27%2F&display=swap">
 <style>
 :root{
   --bg:#eceef2;--surface:#ffffff;--surface2:#f3f4f7;--ink:#111216;--muted:#5d6170;--line:#dcdfe5;--glow:rgba(255,255,255,.95);--card-hi:rgba(255,255,255,.9);--card-sh:0 1px 2px rgba(17,18,22,.06),0 8px 20px rgba(17,18,22,.07);
@@ -86,8 +86,8 @@ label.lb{display:block;font-weight:600;font-size:14px;margin:14px 0 6px}
 .bar i b{display:block;height:100%;background:var(--ink);border-radius:4px}
 /* pitch */
 .pitch{position:relative;aspect-ratio:68/94;border-radius:16px;margin:12px 0 4px;overflow:hidden;
-  background:repeating-linear-gradient(0deg,var(--pitch) 0 9.09%,var(--pitch2) 9.09% 18.18%)}
-.mk{position:absolute;border:2px solid var(--chalk);pointer-events:none}
+  background:var(--pxgrass,#4cae4c) 0 0/100% 100%;image-rendering:pixelated}
+.mk{position:absolute;border:3px solid #f6fff4;pointer-events:none;border-radius:0!important}
 .tok{position:absolute;transform:translate(-50%,-50%);width:76px;background:none;border:0;padding:0;display:flex;flex-direction:column;align-items:center;color:#fff}
 .disc{position:relative;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:800 19px "Big Shoulders Display",Impact,sans-serif;
   background:linear-gradient(135deg,var(--tc) 50%,var(--tc2) 50%);border:2px solid #fff;box-shadow:0 2px 0 rgba(0,0,0,.28);text-shadow:0 1px 2px rgba(0,0,0,.7)}
@@ -339,7 +339,7 @@ details.fold[open]>summary::after{content:"−"}
 .as-stat{background:rgba(255,255,255,.14);border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px}
 .as-mine{background:#ffcc1f;color:#231a00;border-radius:999px;padding:5px 14px;font-weight:800;font-size:14px;animation:asin .5s .3s both}
 .finale .as-name{font-size:56px}.finale .as-face{width:150px;height:150px}
-.as-pitch{position:relative;width:min(330px,84vw,calc((100vh - 230px) * .68));aspect-ratio:68/100;border-radius:14px;margin-top:6px;background:repeating-linear-gradient(0deg,#2f7d4a 0 10%,#2a7343 10% 20%);box-shadow:inset 0 0 0 2px rgba(255,255,255,.5)}
+.as-pitch{position:relative;width:min(330px,84vw,calc((100vh - 230px) * .68));aspect-ratio:68/100;border-radius:14px;margin-top:6px;background:var(--pxgrass,#4cae4c) 0 0/100% 100%;image-rendering:pixelated;box-shadow:inset 0 0 0 2px rgba(255,255,255,.5)}
 .as-tok{position:absolute;transform:translate(-50%,-15px);display:flex;flex-direction:column;align-items:center;width:76px;animation:astok .45s both;z-index:1}
 @keyframes astok{from{opacity:0;transform:translate(-50%,-15px) scale(.55)}to{opacity:1;transform:translate(-50%,-15px)}}
 .as-tok .disc{color:#fff;font-weight:800}.as-tok.me .disc{box-shadow:0 0 0 3px #ffcc1f}
@@ -418,7 +418,7 @@ details.fold[open]>summary::after{content:"−"}
 .cp-head .crest{margin:0;background:rgba(255,255,255,.92);border-radius:10px;padding:4px}.cp-head b{display:block;font-size:18px}.cp-head .cpo{background:rgba(0,0,0,.45);border-radius:12px;padding:5px 10px;text-shadow:none}.cp-head .cpo b{font-size:26px}.cp-head span{font-size:13px;opacity:.92}
 .cp-rt{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.cp-rt div{background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:8px 10px;position:relative;overflow:hidden}
 .cp-rt span{font-size:12px;color:var(--muted);display:block}.cp-rt b{font:900 26px/1.05 "Big Shoulders Display",Impact,sans-serif}.cp-rt i{position:absolute;left:0;bottom:0;height:3px;background:var(--accent)}
-.cp-pitch{position:relative;width:100%;max-width:340px;margin:4px auto 0;aspect-ratio:68/88;border-radius:14px;color:#fff;background:repeating-linear-gradient(0deg,#2f7d4a 0 10%,#2a7343 10% 20%)}
+.cp-pitch{position:relative;width:100%;max-width:340px;margin:4px auto 0;aspect-ratio:68/88;border-radius:14px;color:#fff;background:var(--pxgrass,#4cae4c) 0 0/100% 100%;image-rendering:pixelated}
 .cp-fin{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.cp-fin div{background:var(--surface2);border-radius:10px;padding:8px 10px}.cp-fin b{display:block;font-size:17px}.cp-fin span{font-size:12px;color:var(--muted)}
 .dtw{overflow-x:auto;margin:6px -2px 0;-webkit-overflow-scrolling:touch}
 .dt{border-collapse:separate;border-spacing:0;width:100%;font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -767,12 +767,71 @@ body.dragging{touch-action:none;overscroll-behavior:none}
 @keyframes csIn{from{opacity:0;transform:translateY(30px) rotate(-2deg)}to{opacity:1;transform:none}}@keyframes csBump{50%{transform:scale(1.15);color:#1e7a3c}}
 .csconf{position:fixed;inset:0;pointer-events:none;overflow:hidden}.csconf i{position:absolute;top:-12px;width:8px;height:14px;border-radius:2px;animation:csFall 2.4s ease-in forwards}@keyframes csFall{to{top:110%;transform:rotate(720deg)}}
 @media (prefers-reduced-motion:reduce){.csign *{animation-duration:.01s!important}}
+.tvm{text-align:left}.tvbar{display:flex;align-items:center;gap:8px;background:#0b0d12;color:#fff;border-radius:12px;padding:6px 10px;box-shadow:0 6px 20px #0006}
+.tvmin{background:#e53935;color:#fff;font:400 15px/1 var(--tv-h,Impact);padding:4px 8px;border-radius:6px;letter-spacing:.04em}.tvteam{display:flex;align-items:center;gap:5px;font:400 18px/1 var(--tv-h,Impact);flex:1;justify-content:center}.tvsc{font:400 24px/1 var(--tv-h,Impact);background:#fff;color:#111;padding:3px 10px;border-radius:6px}.tvsc.pulse{animation:tvPulse .7s ease 2}
+.tvlab{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;text-align:center;margin:8px 0 0}
+.tvhero{display:flex;align-items:center;gap:12px;margin:12px 0 6px;animation:ddUp .35s ease both}.tvface{position:relative;flex:none}.tvic{position:absolute;right:-6px;bottom:-4px;font-size:22px;filter:drop-shadow(0 2px 3px #0008)}
+.tvtag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:#ff5252;animation:tvBlink 1.2s infinite}.tvtitle{font:400 32px/1.05 var(--tv-h,Impact)!important;margin:2px 0 0!important;text-align:left!important;letter-spacing:.02em}
+.tvctx{background:linear-gradient(90deg,#ffd23f,#ffb300);color:#1b1b1b;font-size:12.5px;font-weight:700;padding:6px 10px;border-radius:8px;margin:4px 0 8px;animation:ddUp .35s .05s ease both}
+.tvbody{display:flex;gap:10px;align-items:center;margin:0 0 10px;animation:ddUp .35s .1s ease both}.tvbody p{margin:0!important;text-align:left!important;font-size:15px;opacity:.95}
+.bpmpitch{width:96px;flex:none;border-radius:6px;overflow:hidden}.bpmpitch .pf{fill:#2e7d32;stroke:#ffffff88}.bpmpitch line,.bpmpitch circle,.bpmpitch rect:not(.pf):not(.zone){stroke:#ffffff88;stroke-width:.8}.bpmpitch .zone{fill:#ffd23f33;stroke:none}.bpmpitch .me{fill:#ffd23f;stroke:#111;stroke-width:.6}.bpmpitch .ring{fill:none;stroke:#ffd23f;stroke-width:1;animation:tvRing 1.4s infinite;transform-origin:center;transform-box:fill-box}
+.tvopts{display:flex;flex-direction:column;gap:8px}.tvopt{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:10px 12px;border-radius:14px;border:1px solid var(--line);background:var(--surface,#16181d);color:inherit;cursor:pointer;animation:tvIn .35s var(--d) ease both;transition:transform .12s}.tvopt:active{transform:scale(.98)}
+.liveov .tvopt,.bpmo .tvopt{background:#ffffff12;border-color:#ffffff22}.tvopt .oic{font-size:24px;width:30px;text-align:center}.tvopt .ol{flex:1;min-width:0}.tvopt .ol b{display:block;font-size:15px}.tvopt .ol small{display:block;font-size:12px;opacity:.75}
+.obar{display:block;height:5px;border-radius:3px;background:#ffffff22;margin-top:5px;overflow:hidden}.obar u{display:block;height:100%;background:linear-gradient(90deg,#ffd23f,#43a047);border-radius:3px}.oodds{font-size:12px;font-weight:800;opacity:.8;white-space:nowrap}
+.tvout{position:relative;text-align:center}.tvflash{position:absolute;inset:-40px -20px;border-radius:24px;pointer-events:none;animation:tvFlash .9s ease}.tvout.good .tvflash{background:radial-gradient(circle,#43a04766,transparent 70%)}.tvout.bad .tvflash{background:radial-gradient(circle,#e5393555,transparent 70%)}
+.tvbig{animation:tvZoom .5s cubic-bezier(.2,1.4,.4,1) both}.tvres{font-size:54px;margin:16px 0 4px;animation:tvZoom .45s cubic-bezier(.2,1.4,.4,1) both}.tvtxt{font-size:17px;text-align:center!important;margin:6px 0 14px!important;animation:ddUp .4s .15s ease both}
+@keyframes tvIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}@keyframes tvBlink{50%{opacity:.35}}@keyframes tvRing{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.8);opacity:0}}
+@keyframes tvZoom{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}@keyframes tvFlash{from{opacity:1}to{opacity:0}}@keyframes tvPulse{50%{transform:scale(1.18)}}
+.tbcard .tbhead{display:flex;align-items:center;gap:10px;margin:10px 0 4px}.tbic{font-size:30px;line-height:1}.tbcard .tvtitle{text-align:left;margin:0}
+.tboard{width:100%;display:block;margin:8px 0 6px;border-radius:10px}.tbpitch{fill:#1d3b2a}.tbline{fill:none;stroke:#ffffff40;stroke-width:1}.tbgoal{fill:#ffffff10;stroke:#fff;stroke-width:2}.tbgoalT{fill:#fff}
+.tbme{fill:#ffd23f}.tbring{fill:none;stroke:#ffd23f;stroke-width:1.5;animation:tbPulse 1.6s ease-in-out infinite}.tbopp{fill:#9aa3b2}.tbkp{fill:#e0453a}.tbmate{fill:#5aa0e8}.tbball{fill:#fff}
+.tbr{fill:none;stroke-width:2.5;stroke-dasharray:6 4;stroke-linecap:round;opacity:0;animation:tbDraw .5s var(--d) ease forwards}.tbl{font:400 13px/1 var(--tv-h,Impact);fill:#15181f}
+@keyframes tbDraw{from{opacity:0;stroke-dashoffset:40}to{opacity:1;stroke-dashoffset:0}}@keyframes tbPulse{50%{r:14;opacity:.5}}
+.tbx{text-align:left!important;margin:0 0 8px!important;font-size:14px;opacity:.9}.tbopts{display:flex;flex-direction:column;gap:6px}
+.tbopt{display:flex;align-items:center;gap:10px;width:100%;padding:10px 12px;border-radius:12px;border:1px solid #ffffff1c;background:#ffffff0e;color:inherit;text-align:left;cursor:pointer;animation:ddUp .35s var(--d) ease both}
+.tbopt:active{transform:scale(.98)}.tbL{flex:none;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:400 15px/1 var(--tv-h,Impact);color:#15181f}
+.tbol{flex:1;min-width:0}.tbol b{display:block;font-size:15px;font-weight:600}.tbol small{display:block;font-size:11.5px;opacity:.7}
+.tbpct{flex:none;width:62px;text-align:right}.tbpct b{display:block;font:400 20px/1 var(--tv-h,Impact)}.tbpct i{display:block;height:4px;border-radius:2px;background:#ffffff1f;margin-top:4px}.tbpct u{display:block;height:4px;border-radius:2px}
+.tbpct.g b{color:#3fbf6a}.tbpct.g u{background:#3fbf6a}.tbpct.a b{color:#e8b13a}.tbpct.a u{background:#e8b13a}.tbpct.r b{color:#e0453a}.tbpct.r u{background:#e0453a}
+@media (prefers-reduced-motion:reduce){.tbr,.tbopt,.tbring{animation:none;opacity:1}}
+.tbab{color:#ffd23f!important;opacity:1!important;font-weight:600}.ddab{margin-top:4px;font-size:13px;color:#ffd23f}
+.pxim{image-rendering:pixelated;image-rendering:crisp-edges}.tboard{border-radius:10px;overflow:hidden}
+.tbrt{opacity:0;transition:opacity .2s}.tbrt.on{opacity:1}.tbrt.on .tbr{animation:tbDraw .45s ease forwards}.tbr{opacity:1;animation:none}
+.tbopt.sel{border-color:#ffd23f;background:#ffd23f1f}.tbhint{text-align:center!important;font-size:12px!important;opacity:.65!important;margin:8px 0 0!important}
+.tbme{fill:#ffd23f;stroke:#15181f;stroke-width:1.5}.tbopp{fill:#e9edf2;stroke:#15181f;stroke-width:1.2}.tbmate{fill:#3d8bfd;stroke:#15181f;stroke-width:1.2}.tbkp{fill:#ff5a4a;stroke:#15181f;stroke-width:1.2}.tbball{fill:#fff;stroke:#15181f;stroke-width:1}.tbgoal{fill:#ffffff22;stroke:#f6fff4;stroke-width:3}
+
+/* ---------- Pixel style ---------- */
+html[data-skin="pixel"]{--bg:#cfe6c4;--surface:#f8f8f0;--surface2:#ecece0;--ink:#283028;--muted:#5d6b63;--line:#405060;--pxin:#a8b8c8;--accent:#f8d030;--accent-ink:#283028;--card-sh:none;--tv-h:"Jersey 10","Pixelify Sans",ui-monospace,monospace;--tv-b:"Jersey 10","Pixelify Sans",ui-monospace,monospace;--hpg:#48c048;--hpy:#f8c030;--hpr:#f05030}
+@media (prefers-color-scheme:dark){html[data-skin="pixel"]:not([data-theme="light"]){--bg:#050506;--surface:#121215;--surface2:#1b1b20;--ink:#f4f6f8;--muted:#a6abb6;--line:#c8d0dc;--pxin:#3a3f4a;--accent:#f8d030;color-scheme:dark}
+  html[data-skin="pixel"][data-pxnight="navy"]:not([data-theme="light"]){--bg:#101828;--surface:#203048;--surface2:#2a3c58;--line:#a8c0e0;--pxin:#405878}}
+html[data-skin="pixel"][data-theme="dark"]{--bg:#050506;--surface:#121215;--surface2:#1b1b20;--ink:#f4f6f8;--muted:#a6abb6;--line:#c8d0dc;--pxin:#3a3f4a;--accent:#f8d030;color-scheme:dark}
+html[data-skin="pixel"][data-theme="dark"][data-pxnight="navy"]{--bg:#101828;--surface:#203048;--surface2:#2a3c58;--line:#a8c0e0;--pxin:#405878}
+html[data-skin="pixel"] body{font-family:"Jersey 10","Pixelify Sans",ui-monospace,monospace;-webkit-font-smoothing:none}
+html[data-skin="pixel"] :is(.disp,.club,.rec b,h2,.gl,.disc,.shh h3,.rt,.attrs b,.score .big,.trophy,.setup h1,.reel b,.places button b,.disc .rb,.rate,.stgrid b,.lvsc b,.lvban,.lgbrand h1,.ib .in,.ivs,.hero .hn,.hero .hvs,.rsc,.as-t,.as-name,.ft-head,.ft-num,.sp-name,.cpo b,.cp-rt b,.dl-tape span,.dl-t,.dl-rt b,.ch-h,.ch-n,.hpos b,.sbn,.podc .rk,.podc .pt,.ltr .ps,.ltr .pt,.lgh,.lurb b,.tov,.tnm,.tat b,.brc h4,.wm,.scg,.scbp span b,.ldc .v,.dtl b,.ring i,.mcsc,.svh .n,.mvb,.mvbar .c b,.mvbar .tm b,.psh .n,.pst b,.slv,.tro b,.cst b,.lvsb,.liveov .lvban b,.ssg,.ssi b,.hoc .hs,.hcw b,.rkp,.efc .k,.setg,.yat b,.hts,.srpos span,.bpmsb,.bpmbig,:root,.csstamp){font-family:"Jersey 10","Pixelify Sans",ui-monospace,monospace!important;font-weight:700!important;letter-spacing:.01em}
+html[data-skin="pixel"] main h2,html[data-skin="pixel"] .sh h3{font-family:"Jersey 10","Press Start 2P",ui-monospace,monospace!important;font-weight:400!important;font-size:13px!important;line-height:1.5!important;letter-spacing:0!important}
+html[data-skin="pixel"] .srk,html[data-skin="pixel"] nav.tabs button span,html[data-skin="pixel"] .seg{font-family:"Jersey 10","Press Start 2P",ui-monospace,monospace!important;font-weight:400!important;font-size:8.5px!important;letter-spacing:0!important}
+html[data-skin="pixel"] .card{border:3px solid var(--line);border-radius:10px;box-shadow:inset 0 0 0 2px var(--surface),inset 0 0 0 4px var(--pxin)}
+html[data-skin="pixel"] .sh{border:4px solid var(--line);border-bottom:0;border-radius:12px 12px 0 0}
+html[data-skin="pixel"] .btn{border:3px solid var(--line);border-radius:8px;box-shadow:none;font-family:"Jersey 10","Press Start 2P",ui-monospace,monospace;font-weight:400;font-size:11px;line-height:1.5;padding:12px 12px}
+html[data-skin="pixel"] .btn:not(.ghost):not(.danger){background:var(--accent);color:#283028}html[data-skin="pixel"] .btn.ghost{background:var(--surface)}
+html[data-skin="pixel"] .segs{border:3px solid var(--line);border-radius:10px;background:var(--surface)}html[data-skin="pixel"] .seg.on{background:var(--accent);color:#283028;box-shadow:none}
+html[data-skin="pixel"] nav.tabs{border-top:4px solid var(--line)}html[data-skin="pixel"] header.top{border-bottom:3px solid var(--line)}
+html[data-skin="pixel"] .bpm i,html[data-skin="pixel"] .bar i{height:10px;border-radius:3px;background:#4a5560;border:2px solid var(--line);padding:1px}html[data-skin="pixel"] .bpm u{background:var(--hpg);border-radius:1px}
+html[data-skin="pixel"] .chip{border:2px solid var(--line);border-radius:8px}
+html[data-skin="pixel"] .tbx{border:3px solid #c8d0dc;border-radius:8px;box-shadow:inset 0 0 0 2px #121215,inset 0 0 0 4px #e05040;padding:10px 12px;font-size:16px!important;opacity:1!important;background:#121215}
+html[data-skin="pixel"] .tbopt{border:3px solid #c8d0dc;border-radius:8px;background:#121215}html[data-skin="pixel"] .tbopt.sel{border-color:#f8d030;background:#2a2610}
+html[data-skin="pixel"] .bpcardme{border:3px solid var(--line)!important}
+html[data-skin="pixel"] .mtag{border-radius:3px}
+.pxspr{image-rendering:pixelated;image-rendering:crisp-edges;object-fit:contain}
 </style>
 </head>
 <body>
 <div class="app" id="app"></div>
 <div id="sheet"></div>
 <script>
+function getSkin(){try{return localStorage.getItem("pokefc_skin")||"classic";}catch(e){return "classic";}}function getPxNight(){try{return localStorage.getItem("pokefc_pxnight")||"black";}catch(e){return "black";}}
+function applySkin(){const r=document.documentElement,sk=getSkin();if(sk==="pixel")r.dataset.skin="pixel";else delete r.dataset.skin;r.dataset.pxnight=getPxNight();}
+
 "use strict";
 /* ---------- Pokédex data: Gen 1–4 (Gen 4-era typings). Name|Types|HP Atk Def SpA SpD Spe|L=legendary ---------- */
 const RAW={
@@ -1675,8 +1734,16 @@ const CHAL_LEG=1,CHAL_RESPINS=2,SPIN_RESPINS=3;
 function getTheme(){try{if(!localStorage.getItem("pokefc_theme_v2")){localStorage.setItem("pokefc_theme_v2","1");localStorage.setItem(THEME_KEY,"auto");}return localStorage.getItem(THEME_KEY)||"auto";}catch(e){return "auto";}}
 function isDark(){const t=getTheme();return t==="dark"||(t==="auto"&&!!(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches));}
 function applyTheme(t){const r=document.documentElement;if(t==="auto")delete r.dataset.theme;else r.dataset.theme=t;try{localStorage.setItem(THEME_KEY,t);}catch(e){}try{document.querySelectorAll('meta[name="theme-color"]').forEach(m=>{const md=m.getAttribute("media")||"";m.setAttribute("content",t==="auto"?(md.includes("dark")?"#08080b":"#eceef2"):t==="dark"?"#08080b":"#eceef2");});}catch(e){}}
-applyTheme(getTheme());
-function themeChips(){return `<div class="segs" role="radiogroup">${["auto","light","dark"].map(t=>`<button class="seg ${getTheme()===t?"on":""}" data-act="theme" data-th="${t}">${{auto:"Match phone",light:"Light",dark:"Dark"}[t]}</button>`).join("")}</div>`;}
+applyTheme(getTheme());applySkin();
+function homeSettingsHTML(){return `<div class="small muted" style="margin:12px 2px 0">Sound</div><div class="segs" role="radiogroup" style="margin-top:4px">${[["off","Off"],["fx","Effects"],["crowd","With crowd"]].map(([v,l])=>`<button class="seg ${sndMode()===v?"on":""}" data-act="sndset" data-v="${v}">${l}</button>`).join("")}</div>
+  <div class="small muted" style="margin:12px 2px 0">Match intro</div><div class="segs" role="radiogroup" style="margin-top:4px"><button class="seg ${introQuick?"on":""}" data-act="introset" data-v="all">Every match</button><button class="seg ${introQuick?"":"on"}" data-act="introset" data-v="watched">Watched only</button></div>
+  <div class="small muted" style="margin:12px 2px 0">Show nicknames in</div><div class="chips" style="margin:4px 0 0">${[["pitch","Squad & pitch"],["lists","Lists & tables"],["match","Matches"],["news","News"]].map(([k,l])=>`<button class="chip ${NP[k]?"on":""}" data-act="nptog" data-k="${k}" aria-pressed="${NP[k]}">${l}</button>`).join("")}</div>
+  <div class="small muted" style="margin:12px 2px 0">Tips</div><div class="segs" role="radiogroup" style="margin-top:4px"><button class="seg ${TIPS_ON?"on":""}" data-act="tipset" data-v="on">On</button><button class="seg ${TIPS_ON?"":"on"}" data-act="tipset" data-v="off">Off</button></div>`;}
+function themeChips(){const sk=getSkin(),pn=getPxNight();return `<div class="segs" role="radiogroup">${["auto","light","dark"].map(t=>`<button class="seg ${getTheme()===t?"on":""}" data-act="theme" data-th="${t}">${{auto:"Match phone",light:"Light",dark:"Dark"}[t]}</button>`).join("")}</div>
+    <div class="small muted" style="margin:10px 2px 0">Style</div><div class="segs" role="radiogroup" style="margin-top:4px">${[["classic","Classic"],["pixel","Pixel"]].map(([k,l])=>`<button class="seg ${sk===k?"on":""}" data-act="skin" data-sk="${k}">${l}</button>`).join("")}</div>
+    <div class="small muted" style="margin:10px 2px 0">Player icons</div><div class="segs" role="radiogroup" style="margin-top:4px">${[["auto","Match style"],["badge","Type badges"],["sprite","Pixel sprites"]].map(([k,l])=>`<button class="seg ${iconMode()===k?"on":""}" data-act="iconset" data-v="${k}">${l}</button>`).join("")}</div>
+    ${sk==="pixel"?`<div class="small muted" style="margin:10px 2px 0">Night colours (Pixel, dark mode)</div><div class="segs" role="radiogroup" style="margin-top:4px">${[["black","Black"],["navy","Navy"]].map(([k,l])=>`<button class="seg ${pn===k?"on":""}" data-act="pxnight" data-pn="${k}">${l}</button>`).join("")}</div>`:""}`;}
+
 const EMB={Normal:'<circle cx="12" cy="12" r="6"/>',
 Fire:'<path d="M12 2c1 4 6 6 6 12a6 6 0 0 1-12 0c0-3 2-5 3-7 1 1 1 3 1 4 2-2 2-6 2-9z"/>',
 Water:'<path d="M12 2s-7 8-7 13a7 7 0 0 0 14 0c0-5-7-13-7-13z"/>',
@@ -1697,10 +1764,10 @@ Steel:'<path fill-rule="evenodd" d="M12 2l9 5v10l-9 5-9-5V7zm0 6.5a3.5 3.5 0 1 0
 Fairy:'<path d="M12 2l2.6 7.4L22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6z"/>'};
 const FORM_PRE=/^(Alolan|Galarian|Hisuian|Paldean|Heat|Wash|Frost|Fan|Mow|Sandy|Trash|Sky|Origin) /,FORM_SUF=/ (Attack|Defense|Speed)$/;
 const baseName=n=>n.replace(FORM_PRE,"").replace(FORM_SUF,"");
-function sprSrc(s,sh){if(!SPRITES)return null;if(SPR_MODE==="name")return {a:`sprites/${slug(s.n)}.png`,b:""};
+function sprSrc(s,sh){if(!SPRITES)return null;if(SPR_MODE==="name")return {a:`sprites/${slug(s.n)}.png`,b:""};if(SPR_MODE==="zip"){const id=DEXID&&DEXID[slug(baseName(s.n))],z=window.ZIPSPR;if(!id||!z||!z.n[id])return null;return sh&&z.s[id]?{a:z.s[id],b:z.n[id]}:{a:z.n[id],b:""};}
   const id=DEXID&&DEXID[slug(baseName(s.n))];if(!id)return null;const n=`${SPR_BASE}${id}.png`;return sh?{a:`${SPR_BASE}shiny/${id}.png`,b:n}:{a:n,b:""};}
-function face(s,sz,sh){const r=sprSrc(s,sh);return r?`<img class="spr" src="${r.a}" alt="" width="${sz}" height="${sz}" loading="lazy" data-alt="${r.b}" data-fb="${esc(emblem(s.t[0],sz))}" onerror="if(this.dataset.alt){this.src=this.dataset.alt;this.dataset.alt='';}else this.outerHTML=this.dataset.fb">`:emblem(s.t[0],sz);}
-function discInner(s,r,sh){const x=sprSrc(s,sh);return x?`<img class="spr" src="${x.a}" alt="" data-alt="${x.b}" onerror="if(this.dataset.alt){this.src=this.dataset.alt;this.dataset.alt='';}else this.remove()"><span class="rb">${r}</span>`:r;}
+function face(s,sz,sh){const r=sprSrc(s,sh);if(!r&&useSprites()&&s&&s.n)return pxImg(s,sz||24,sh);return r?`<img class="spr" src="${r.a}" alt="" width="${sz}" height="${sz}" loading="lazy" data-alt="${r.b}" data-fb="${esc(useSprites()&&s&&s.n?pxImg(s,sz,sh):emblem(s.t[0],sz))}" onerror="if(this.dataset.alt){this.src=this.dataset.alt;this.dataset.alt='';}else this.outerHTML=this.dataset.fb">`:emblem(s.t[0],sz);}
+function discInner(s,r,sh){const x=sprSrc(s,sh);if(!x&&useSprites()&&s&&s.n)return `<img class="spr pxspr" src="${pxSprite(s,sh)}" alt=""><span class="rb">${r}</span>`;return x?`<img class="spr" src="${x.a}" alt="" data-alt="${x.b}" data-px="${useSprites()&&s&&s.n?pxSprite(s,sh):""}" onerror="if(this.dataset.alt){this.src=this.dataset.alt;this.dataset.alt='';}else if(this.dataset.px){this.src=this.dataset.px;this.dataset.px='';this.classList.add('pxspr');}else this.remove()"><span class="rb">${r}</span>`:r;}
 function emblem(t,sz){sz=sz||22;return `<span class="emb ${DARKTXT.has(t)?"dk":""}" style="--c:${TC[t]};width:${sz}px;height:${sz}px" title="${t}"><svg viewBox="0 0 24 24" style="width:${Math.round(sz*.6)}px;height:${Math.round(sz*.6)}px" aria-hidden="true">${EMB[t]}</svg></span>`;}
 /* spinner: generation + a type that exists in that generation */
 const GEN_TYPES={};DEX.forEach(s=>{(GEN_TYPES[s.g]=GEN_TYPES[s.g]||new Set());s.t.forEach(t=>GEN_TYPES[s.g].add(t));});
@@ -1776,7 +1843,7 @@ function viewSlots(){const m=getMeta(),fmt=t=>{try{return new Date(t).toLocaleDa
     <button class="modec bp" data-act="newmode" data-k="bp"><span class="mi">⚽</span><b>Be a Player</b><small>Create a Pokémon, get drafted and play your way to the top.</small></button></div>
     <button class="modec wide" data-act="copen"><span class="mi">🎰</span><span style="text-align:left"><b>Spinner challenge</b><small>Spin for a squad and see how far it goes.</small></span></button>`;
   if(filled.length){h+=`<h2 style="margin-top:18px">Your saves <span class="small muted" style="font-weight:600;text-transform:none;letter-spacing:0">${filled.length} of ${SLOTS}</span></h2>`+[1,2,3].map(n=>{const x=m[n];return x?`<button class="card svrow" data-act="slotgo" data-n="${n}">${x.bp&&x.bp.sp&&BY[x.bp.sp]?face(BY[x.bp.sp],36):crestSVG(x,34)}<span style="flex:1;min-width:0;text-align:left"><b>${esc(x.bp?(x.bp.nick||"Your player"):x.club)}</b> ${tagOf(x)}<br><span class="small muted">${x.bp?esc(x.club)+". ":""}${where(x)}</span></span><span class="chev">›</span></button>`:`<div class="card svrow empty"><span class="small muted">Slot ${n} is empty</span></div>`;}).join("")+`<button class="btn ghost" data-act="slotman" data-v="1">Manage saves</button>`;}
-  return h+`<div class="srk" style="margin:18px 2px 6px">Appearance</div>${themeChips()}<button class="btn ghost" data-act="logout" style="margin-top:12px">Log out</button></div>`;}
+  return h+`<h2 style="margin-top:18px">Settings</h2><div class="card"><div class="srk" style="margin:0 0 6px">Appearance</div>${themeChips()}${homeSettingsHTML()}</div><button class="btn ghost" data-act="logout" style="margin-top:12px">Log out</button></div>`;}
 function wordmark(cls){return `<div class="wm ${cls||""}" aria-label="Pocket Pitch"><span>Pocket</span><span class="g">Pitch</span></div><div class="wm-stripe"></div>`;}
 function viewLogin(){let nm="";try{nm=localStorage.getItem("pokefc_user")||"";}catch(e){}
   return `<div class="login"><div class="lgbrand">${iconSVG(76)}${wordmark("sm")}<p>Pokémon football management</p></div>
@@ -2369,7 +2436,7 @@ function newOther(clubs){return {ai:clubs,fixtures:makeFixtures(),results:[]};}
 function otherCatchUp(){if(!state||!state.other)return;const upto=state.phase==="season"?state.md:(state.phase==="playoffs"||state.phase==="offseason")?MATCHDAYS:0;for(let md=0;md<upto;md++)simOther(md);}
 function finishMatchday(md,m){otherCatchUp();simOther(md);worldCatchUp();bookMatch(m,"League");faAfterMatch();if(m&&m.h===0&&m.derby)state.fin.dg=(state.fin.dg||0)+Math.round(revenue(state.fin.size)*.025/1e4)*1e4;const res=state.results[md],i=res.indexOf(null);if(i>=0)res[i]=m;state.last=m;state.md=md+1;
   if(state.dl&&state.dl.open&&state.dl.season===state.season&&state.md>DEADLINE_MD){state.dl.open=false;state.news=(state.news||[]).concat(["🔒 The transfer deadline has passed. The window reopens in the off-season."]);}
-  if(state.md===DEADLINE_MD&&!(state.dl&&state.dl.season===state.season&&state.dl.shown))openDeadline();
+  if(state.md===DEADLINE_MD&&!isBP()&&!(state.dl&&state.dl.season===state.season&&state.dl.shown))openDeadline();
   inboxMatch(m,"League");
   const g=devTick(),tr=trainTick(1),sc=scoutTick();rivalTick();loanTick();ybidTick();if(state.pm){state.pm.tr=(state.pm.tr||[]).concat(tr);state.pm.inj.push(...INJ_LOG);state.pm.lvl.push(...g.lvl);state.pm.evo.push(...g.evo);if(sc)state.pm.scout=sc;state.pm.n=(state.pm.n||0)+1;}INJ_LOG.length=0;
   cupCatchUp();chAuto(false);if(state.md>=MATCHDAYS){while(cupNow()&&state.cup.champ===null)playCupRound();if(isRegion())chSeasonEnd();else if(state.div===2){state.po=null;endSeason();}else startPlayoffs();}}
@@ -2448,7 +2515,7 @@ function openLive(c,onDone,centreSpec,afterClose){ambStart();
     <div class="lvwrap"><canvas id="lvcv"></canvas>
       <div class="lvban" id="lvban"></div><div class="lvtk" id="lvt" hidden></div><div class="lvpanel" id="lvpanel" hidden></div></div>
     <div class="lvst" id="lvst"></div><div class="lvfeed" id="lvfeed"></div>
-    <div class="lvctl" id="lvctl"><div class="lvsp">${[1,2,4].map(x=>`<button class="chip ${x===1?"on":""}" data-lv="sp" data-x="${x}">${x}×</button>`).join("")}<button class="chip" data-lv="sp" data-x="hl" aria-label="Highlights">⚡</button></div>${c.h===0||c.a===0?`<button class="chip lvb" data-lv="subs">Subs &amp; tactics</button>`:""}<button class="chip lvb pri" data-lv="skip">Skip</button></div>`;
+    <div class="lvctl" id="lvctl"><div class="lvsp">${[1,2,4].map(x=>`<button class="chip ${x===1?"on":""}" data-lv="sp" data-x="${x}">${x}×</button>`).join("")}<button class="chip" data-lv="sp" data-x="hl" aria-label="Highlights">⚡</button></div>${(c.h===0||c.a===0)&&!isBP()?`<button class="chip lvb" data-lv="subs">Subs &amp; tactics</button>`:""}<button class="chip lvb pri" data-lv="skip">Skip</button></div>`;
   document.body.appendChild(root);
   const cv=root.querySelector("#lvcv"),ctx=cv.getContext("2d"),ban=root.querySelector("#lvban"),tick=root.querySelector("#lvt"),feedEl=root.querySelector("#lvfeed"),stEl=root.querySelector("#lvst"),momEl=root.querySelector("#lvmom"),panel=root.querySelector("#lvpanel"),dpr=Math.min(2,window.devicePixelRatio||1);
   const W0=Math.max(200,Math.min(520,root.clientWidth-24,(window.innerHeight-440)*68/105));cv.style.width=W0+"px";cv.style.height=Math.round(W0*105/68)+"px";cv.width=W0*dpr;cv.height=Math.round(W0*105/68)*dpr;
@@ -2512,7 +2579,7 @@ function openLive(c,onDone,centreSpec,afterClose){ambStart();
       if(c.ko&&c.g[0]===c.g[1]){c.et=true;runCtx(c,Math.max(90,nextSeg),120);if(c.g[0]===c.g[1])c.pen=shootout(activeL(c,0),activeL(c,1));}end=c.et?120:90;L.clock=end;finish();}
     if(k==="close")close(null);if(k==="centre")close(centreSpec);});
   const execEvent=ev=>{
-    if(ev.t==="s"){const pl=P.find(p=>p.s===ev.s&&p.k===ev.kind);if(pl){pl.nick=ev.nick;pl.sh=!!(findPc(c,ev.raw[1])||{}).sh;}say(`⇄ ${ev.nick} comes on for ${ev.ast||"a teammate"} (${Math.floor(ev.min)}′).`);L.ev=null;return;}
+    if(ev.t==="s"){const pl=P.find(p=>p.s===ev.s&&p.k===ev.kind),pc=findPc(c,ev.raw[1])||{};if(pl){pl.nick=ev.nick;pl.sh=!!pc.sh;pl.me=!!pc.me;}say(`⇄ ${ev.nick} comes on for ${ev.ast||"a teammate"} (${Math.floor(ev.min)}′).`);L.ev=null;if(pc.me){banner("You’re coming on!",`${Math.floor(ev.min)}′`,1.4,null);}return;}
     if(ev.t==="y"||ev.t==="r"){SFX.whistle(1);L.stop={left:1.1,x:L.ball.x,y:L.ball.y,ic:ev.t==="y"?"🟨":"🟥",txt:ev.nick};L.marks=(L.marks||[]).concat(ev.t==="r"?[{m:ev.min,ic:"🟥",s:ev.s}]:[]);say(`${ev.t==="y"?"Yellow":"Red"} card for ${ev.nick} (${Math.floor(ev.min)}′).`);if(ev.t==="r"){const pl=P.find(p=>p.s===ev.s&&p.k===ev.kind);if(pl){pl.gone=true;if(L.holder===pl){const o=near(pl.s,pl.x,pl.y,pl);if(o)give(o);}}banner("Red card",ev.nick,1,null);}L.ev=null;return;}
     if(ev.t==="i"){SFX.whistle(1);L.stop={left:1.2,x:L.ball.x,y:L.ball.y,ic:"🩹",txt:ev.nick};say(`${ev.nick} goes down injured (${Math.floor(ev.min)}′).`);L.ev=null;return;}
     L.sh[ev.s]++;if(ev.t!=="g"&&Math.random()<.25)SFX.ooh();const att=side(ev.s).filter(p=>p.role!=="GK");if(!att.length){L.ev=null;return;}
@@ -2525,7 +2592,7 @@ function openLive(c,onDone,centreSpec,afterClose){ambStart();
         banner("GOAL!",`${ev.nick}, ${team(ev.s===0?c.h:c.a).short} ${mn}′`,1.6,()=>kickoff(1-ev.s),ev.s===0?c0:c1);L.ev=null;});
     else if(ev.save)fly(.5+(Math.random()-.5)*.1,ev.s===0?.04:.96,.3,"shot",null,()=>{const k=keeper(1-ev.s);give(k);say(`Saved! ${k.nick||"The keeper"} denies ${ev.shooter.nick||"them"}.`);L.timer=.8;L.ev=null;});
     else fly(.5+(Math.random()<.5?-1:1)*(.1+Math.random()*.08),gy,.32,"shot",null,()=>{const k=keeper(1-ev.s);give(k);say(`${ev.shooter.nick||"A shot"} goes wide.`);L.timer=.8;L.ev=null;});};
-  const showHT=()=>{L.paused=true;L.htWait=true;const A=c.acc,n=A.length||1,ph=Math.round(A.reduce((s2,a)=>s2+a.ph,0)/n),xg=[A.reduce((s2,a)=>s2+(a.lh||0),0),A.reduce((s2,a)=>s2+(a.la||0),0)],mine=c.h===0||c.a===0;
+  const showHT=()=>{L.paused=true;L.htWait=true;const A=c.acc,n=A.length||1,ph=Math.round(A.reduce((s2,a)=>s2+a.ph,0)/n),xg=[A.reduce((s2,a)=>s2+(a.lh||0),0),A.reduce((s2,a)=>s2+(a.la||0),0)],mine=(c.h===0||c.a===0)&&!isBP();
     const S=mine?c.S[mySide]:null,tired=S?S.L.map(x=>({x,f:clamp(fatOf(x,90,S)/6,0,1)})).filter(o=>o.x.p&&!o.x.red&&o.x.role!=="GK").sort((a,b)=>b.f-a.f).slice(0,3):[],ment=S?(S.tac.ment||0):0,row=(l,a,b2)=>`<div class="htr"><b>${a}</b><span>${l}</span><b>${b2}</b></div>`;
     panel.innerHTML=`<div class="htc"><div class="htk">Half-time</div><div class="hts">${esc(T0.short)} ${L.score[0]}–${L.score[1]} ${esc(T1.short)}</div>
       ${row("Possession",ph+"%",(100-ph)+"%")}${row("Shots",L.sh[0],L.sh[1])}${row("xG",xg[0].toFixed(1),xg[1].toFixed(1))}
@@ -2573,11 +2640,7 @@ function openLive(c,onDone,centreSpec,afterClose){ambStart();
     L.parts.forEach(q=>{q.y+=dt*(c.wx==="snow"?.05:c.wx==="sand"?.02:.6)*q.v;q.x+=dt*(c.wx==="sand"?.25:c.wx==="rain"?.08:.01*Math.sin(L.tt+q.v*9))*q.v;if(q.y>1)q.y-=1;if(q.x>1)q.x-=1;});
     upd();};
   const draw=()=>{const W=cv.width,H=cv.height,mg=W*.035,pw=W-2*mg,ph=H-2*mg,X=x=>mg+pw*x,Y=y=>mg+ph*y;
-    for(let i=0;i<12;i++){ctx.fillStyle=i%2?"#2a7343":"#2f7d4a";ctx.fillRect(0,H*i/12,W,H/12+1);}
-    ctx.strokeStyle="rgba(255,255,255,.75)";ctx.lineWidth=2*dpr;ctx.strokeRect(mg,mg,pw,ph);
-    ctx.beginPath();ctx.moveTo(mg,H/2);ctx.lineTo(W-mg,H/2);ctx.stroke();ctx.beginPath();ctx.arc(W/2,H/2,pw*.13,0,7);ctx.stroke();
-    [[0,1],[1,-1]].forEach(([t,sg])=>{const y0=t?H-mg:mg;ctx.strokeRect(X(.28),sg>0?y0:y0-ph*.16,pw*.44,ph*.16);ctx.strokeRect(X(.4),sg>0?y0:y0-ph*.06,pw*.2,ph*.06);
-      ctx.fillStyle="rgba(255,255,255,.85)";ctx.fillRect(X(.44),sg>0?y0-mg*.55:y0,pw*.12,mg*.55);});
+    {const cols=58,rows=Math.max(40,Math.round(cols*H/W)),pp=pixelPitch(cols,rows);ctx.imageSmoothingEnabled=false;ctx.drawImage(pp,0,0,W,H);}
     if(L.net){const a=Math.min(1,L.net.t/1.6),y0=L.net.top?0:H-mg*1.2,gx=X(.4),gw=pw*.2;ctx.globalAlpha=.35+.5*Math.abs(Math.sin(L.net.t*9))*a;ctx.fillStyle=L.net.col;ctx.fillRect(gx,y0,gw,mg*1.2);ctx.globalAlpha=1;
       ctx.strokeStyle=`rgba(255,255,255,${.8*a})`;ctx.lineWidth=1*dpr;for(let i=1;i<6;i++){ctx.beginPath();ctx.moveTo(gx+gw*i/6,y0);ctx.lineTo(gx+gw*i/6,y0+mg*1.2);ctx.stroke();}}
     const r=W*.026;
@@ -2600,7 +2663,7 @@ function openLive(c,onDone,centreSpec,afterClose){ambStart();
     if(c.wx==="snow"){ctx.fillStyle="rgba(255,255,255,.85)";L.parts.forEach(q=>{ctx.beginPath();ctx.arc(q.x*W,q.y*H,1.6*dpr*q.v+.6,0,7);ctx.fill();});}
     if(c.wx==="sand"){ctx.strokeStyle="rgba(230,200,140,.5)";ctx.lineWidth=1*dpr;ctx.beginPath();L.parts.forEach(q=>{ctx.moveTo(q.x*W,q.y*H);ctx.lineTo(q.x*W+14*dpr,q.y*H+1*dpr);});ctx.stroke();}};
   const frame=ts=>{if(L.closed)return;if(!L.last)L.last=ts;const dt=Math.min(.05,(ts-L.last)/1000);L.last=ts;step(dt);draw();L.raf=requestAnimationFrame(frame);};
-  kickoff(0);say(`Kick-off. ${WX[c.wx].ic} ${WX[c.wx].n}.${c.derby?` It’s the ${derbyName(c.h)}!`:""}`);upd();L.raf=requestAnimationFrame(frame);
+  kickoff(0);say(`Kick-off. ${WX[c.wx].ic} ${WX[c.wx].n}.${c.derby?` It’s the ${derbyName(c.h)}!`:""}`);if(isBP()&&(c.h===0||c.a===0||c.bpLoan)){const mp=bpMe(),S=c.S[bpSide(c)];if(mp){if(S.L.some(x=>x.p===mp))say(`${mp.nick} starts. Key moments will pause the match.`);else if(S.bench.includes(mp))say(`${mp.nick} starts on the bench. Key moments begin if you come on.`);else say(`${mp.nick} isn’t in the matchday squad today.`);}}upd();L.raf=requestAnimationFrame(frame);
   return L;
 }
 /* ---------- Badge Cup ---------- */
@@ -3153,7 +3216,7 @@ function viewSeason0(){
     h+=`</div>`;}
   return h;
 }
-function boardHTML(){const c=state.career[state.career.length-1]||{exp:10,pos:10,repd:0},d=c.exp-c.pos;let h="";
+function boardHTML(){if(isBP())return `<div class="card"><p style="margin:0">The season’s over. Your contract, any offers and next season are on the <b>Me</b> tab.</p></div>`;const c=state.career[state.career.length-1]||{exp:10,pos:10,repd:0},d=c.exp-c.pos;let h="";
   const v=d>=3?"Exceeded expectations":d>=-2?"Met expectations":d>=-5?"Below expectations":"Well below expectations";
   h+=`<h2>The board</h2><div class="card"><p style="margin:0">Target ${ord(c.exp)}, finished ${ord(c.pos)}. <b>${v}.</b></p><p class="small muted" style="margin:6px 0 0">Manager reputation ${state.mgr.rep}${c.repd?` (${c.repd>0?"+":""}${c.repd})`:""}</p></div>`;
   {const fl=state.fin.log[state.fin.log.length-1];if(fl)h+=`<div class="card"><p class="small" style="margin:0"><b>Finances:</b> income ${money(fl.inc)}${fl.shirts?` (including ${money(fl.shirts)} of shiny shirt sales)`:""}, league prize ${money(fl.prize)}${fl.po?`, playoff prize ${money(fl.po)}`:""}${fl.cup?`, cup prize ${money(fl.cup)}`:""}${fl.dg?`, derby gate receipts ${money(fl.dg)}`:""}${fl.stf?`, coaching staff wages ${money(fl.stf)}`:""}, wages ${money(fl.wages)}.</p><p class="small muted" style="margin:6px 0 0">Balance ${money(fl.bal)}. Next season’s wage budget ${money(state.fin.wb)}.</p></div>`;}
@@ -3223,11 +3286,17 @@ function wageBar(add,remove,label,skip){const wb=state.fin.wb||1,bill=wageBill()
 /* ---------- Be a Player ---------- */
 const BP_ATTR=["PAC","POW","SKL","TKL","RDG","STA"],BP_PTS=20,BP_MAXPT=8;
 const isBP=()=>!!(state&&state.bp);
+function bpRescue(){if(!isBP())return false;const all=[...state.xi,...state.bench,...(state.res||[])];if(all.some(p=>p&&p.me)||(state.loans||[]).some(l=>l.p&&l.p.me))return false;
+  let me=null;const take=(arr,i)=>{me=arr[i];arr[i]=null;};
+  (state.market||[]).forEach((p,i)=>{if(!me&&p&&p.me){me=p;state.market.splice(i,1);}});
+  const squads=[...(state.ai||[]),...((state.other&&state.other.ai)||[]),...Object.values(state.world||{}).flatMap(w=>[...(w.d1||[]),...(w.d2||[])])];
+  squads.forEach(t=>{["xi","bench"].forEach(z=>{(t[z]||[]).forEach((p,i)=>{if(!me&&p&&p.me)take(t[z],i);});});});
+  if(!me)return false;let wj=state.bench.findIndex(x=>!x);if(wj<0){wj=0;state.bench.forEach((q,j)=>{if(bestRoleP(q)[1]<bestRoleP(state.bench[wj])[1])wj=j;});toFA(state.bench[wj]);}state.bench[wj]=me;me.con=Math.max(me.con||1,2);bpPickXI();save();return true;}
 const bpMe=()=>state&&([...state.xi,...state.bench,...(state.res||[])].find(p=>p&&p.me)||((state.loans||[]).find(l=>l.p&&l.p.me)||{}).p);
 function bpStage(sp){if(!DEX_N)genInd();if(!window.BP_PRE){const pre={};DEX_N.forEach(s=>evoTargets(s.n).forEach(t=>pre[t]=1));window.BP_PRE=pre;}const has=evoTargets(sp).length>0,pre=!!window.BP_PRE[sp];return !pre&&has?"First stage":pre&&has?"Middle stage":pre?"Final stage":"Single stage";}
 function bpCards(gen){if(!DEX_N)genInd();const pool={f:[],m:[],l:[]};DEX_N.forEach(s=>{if(gen&&BY[s.n]&&BY[s.n].g!==gen)return;const st=bpStage(s.n);(st==="First stage"?pool.f:st==="Middle stage"?pool.m:pool.l).push(s.n);});const out=[];let g=0;while(out.length<3&&g++<200){const r=Math.random(),src=(r<.7&&pool.f.length?pool.f:r<.95&&pool.m.length?pool.m:pool.l.length?pool.l:pool.f),sp=pick(src);if(sp&&!out.includes(sp))out.push(sp);}return out;}
 function bpStartDev(sp){const st=bpStage(sp),e=EVO[sp];let L;if(e&&evoTargets(sp).length)L=e.lv-(st==="First stage"?ri(8,11):ri(10,13));else L=ri(27,33);return clamp(Math.floor((L-35)/4),-8,0);}
-function bpInd(b){if(!b.base||b.base.sp!==b.sp){const g=genInd({sp:b.sp,age:17,noL:true,sh:false});g.dev=b.dev!==undefined?b.dev:(b.dev=bpStartDev(b.sp));g.pot=3;b.base=g;}const ind=JSON.parse(JSON.stringify(b.base));ind.ev={...(b.pts||{})};return ind;}
+function bpInd(b){if(!b.base||b.base.sp!==b.sp){const g=genInd({sp:b.sp,age:17,noL:true,sh:false});g.dev=b.dev!==undefined?b.dev:(b.dev=bpStartDev(b.sp));g.pot=3;const sa=speciesAbilities(b.sp),pool=[...new Set(BY[b.sp].t.flatMap(t=>TYPE_AB[t]||[]))].filter(a=>!sa.includes(a)&&ABIL[a]);g.ab=pool.length&&Math.random()<.25?pick(pool):pick(sa);b.base=g;}const ind=JSON.parse(JSON.stringify(b.base));ind.ev={...(b.pts||{})};return ind;}
 function bpRate(b,role){const ind=bpInd(b);return pr(ind,role||b.role||"CM");}
 function bpListHTML(b){const q=(b.q||"").toLowerCase().trim(),list=q.length>=2?DEX_N.filter(s=>s.n.toLowerCase().includes(q)).slice(0,24):[];return list.length?`<div class="bplist">${list.map(s=>`<button class="lvrow ${b.sp===s.n?"on":""}" data-act="bpsp" data-sp="${esc(s.n)}">${face(s,30)}<span style="flex:1;text-align:left"><b>${esc(s.n)}</b> <span class="small muted">${bpStage(s.n)}</span></span></button>`).join("")}</div>`:q.length>=2?`<p class="small muted">No Pokémon match “${esc(b.q)}”.</p>`:"";}
 function bpSetupHTML(){if(!setup.world){setup.world=genWorld();}const b=setup.bp||(setup.bp={step:1,gen:null,cards:[],rolls:3,pts:{},spins:3,how:"points",path:"draft",reg:setup.reg||1,name:setup.mgrName||""});
@@ -3307,6 +3376,8 @@ function viewMe(){const b=state.bp,me=bpMe();if(!me)return `<div class="card">${
       <div class="small">Lv ${lvOf(me)} · age ${me.age} · ${ROLE_NAMES[role]} · rated ${pr(me,role)}</div><div class="small muted">${esc(evoInfo(me)||"Fully evolved")}</div></div></div>
     <div class="bpats">${BP_ATTR.map(q=>`<div><b>${pAttr(me,q)}</b><span>${q}</span></div>`).join("")}</div>
     <div class="bpss"><div><b>${me.apps||0}</b><span>Apps</span></div><div><b>${me.goals||0}</b><span>Goals</span></div><div><b>${avg}</b><span>Avg rating</span></div><div><b>${money(me.wage)}</b><span>Wage</span></div></div></div>`;
+  if(state.phase==="playoffs"){const g=nextGame();h+=g&&g.k==="po"?`<div class="card bpsel bps-start"><div class="srk">Next match</div>${nextGameLine()}<div class="bpplay"><button class="btn" data-act="watch">Watch</button><button class="btn ghost" data-act="bpkm">Key moments</button><button class="btn ghost" data-act="play">Quick sim</button></div></div>`
+      :`<div class="card"><div class="srk">The Championship</div><p style="margin:4px 0 10px">The Championship knockouts are under way. ${esc(state.club.name)} aren’t involved.</p><button class="btn" data-act="posim">Simulate the rest of the Championship</button></div>`;}
   if(state.phase==="season"&&b.loanNeg&&!bpLoan()){h+=`<div class="card bpsel bps-loan"><div class="srk">Loan talks under way</div><p style="margin:4px 0 0">Your club is negotiating. Your first choice is <b>${esc(b.loanNeg.pref.club)}</b> (${esc(b.loanNeg.pref.lg)}). It should be sorted in a game or two.</p></div>`;}
   if(state.phase==="season"&&bpLoan()){h+=bpLoanCard();}else if(state.phase==="season"&&bpYouth()){h+=bpYouthCard();}if(state.phase==="season"&&!bpLoan()&&!bpYouth()){h+=`<div class="card bpsel bps-${st[0]}"><div class="srk">Next match</div>${nextGameLine()}<b style="font-size:18px">${st[1]}</b><p class="small muted" style="margin:4px 0 8px">${st[0]==="start"?"The manager trusts you. Keep it up.":st[0]==="bench"?"Impress in training and earn the manager’s trust to start.":"Earn the manager’s trust to get back in the squad."}</p>
       <div class="bpplay"><button class="btn" data-act="watch">Watch</button><button class="btn ghost" data-act="bpkm">Key moments</button><button class="btn ghost" data-act="play">Quick sim</button></div><p class="small muted" style="margin:6px 0 0">Watch the full match with 3–5 key moments, play just your key moments, or sim straight to the result.</p></div>`;}
@@ -3314,6 +3385,7 @@ function viewMe(){const b=state.bp,me=bpMe();if(!me)return `<div class="card">${
     else h+=`<div class="bpacts">${BP_ACTS.map(([k,ic,l,d])=>`<button class="card bpa" data-act="${k==="train"?"bptrain":"bpact"}" data-k="${k}"><span>${ic}</span><b>${l}</b><small>${d}</small></button>`).join("")}</div>`;}
   if(state.phase==="season")h+=bpCareerCard();if(state.phase==="offseason")h+=bpOffCard();
   if(b.last){const L=b.last;h+=`<div class="card"><div class="srk">Last match</div><p style="margin:4px 0 0">${L.played?`You played: rating <b>${L.r.toFixed(1)}</b>${L.g?`, ${L.g} goal${L.g>1?"s":""}`:""}${L.motm?" · ⭐ Player of the Match":""}.`:L.loan?"You were away on loan.":L.youth?"You were with the youth team.":"You didn’t play."} ${L.win?"Your team won.":L.loss?"Your team lost.":"It was a draw."}</p></div>`;}
+  h+=`<div class="card">${bpAbHTML(me)}</div>`;
   {const me2=bpMe();if(me2&&!b.story)b.story=bpStory({...b,reg:b.reg||state.reg,sp:me2.sp},me2);if(b.story)h+=`<details class="card fold"><summary>Your story <span class="small muted">· from ${esc(b.story.home)}</span></summary><div style="margin-top:8px">${bpStoryHTML(b.story)}</div>${b.drafted?`<p class="small muted" style="margin:8px 0 0">Drafted with pick ${b.drafted} by ${esc(b.club0||state.club.name)}.</p>`:""}</details>`;}
   h+=`<h2>You</h2><div class="card">${meter("Manager trust",b.trust,"Decides whether you start")}${meter("Chemistry",b.chem,"Link-up with teammates, and helps selection")}${meter("Morale",b.mor,"Your form on the pitch")}${meter("Star power",b.star,"Fans, sponsors and bigger contracts")}${meter("Leadership",b.lead,"Grows as you play well. Captains come from here")}${meter("Temperament",b.temp+50,"Level-headed players stay calm, hotheads pick up cards",tl)}</div>`;
   return h;}
@@ -3407,6 +3479,15 @@ function bpLoanAsk(){const b=state.bp,me=bpMe();if(!me||bpLoan())return null;if(
   if(Math.random()>=ch){b.trust=bpCl(b.trust-2);return ["🙅","The manager says no",st==="start"?"You’re a regular starter. The manager wants you here.":"The manager wants to keep you around for now. Ask again in a few weeks."];}
   const offs=loanOffers();if(!offs.length)return ["📭","No takers","The manager tried, but no clubs are looking for a loan player right now."];
   const o=bpPickLoanOffer();bpGoLoan(o);return ["✈️","Loan approved",`The manager has arranged a loan to ${o.club} in ${o.lg} until the end of the season. ${o.what}. Your next games will be for them.`];}
+function bpCareerHTML(){const b=state.bp,me=bpMe();if(!me)return `<div class="card">${emptyHTML("🤔","Player not found","")}</div>`;const B=bdg(),nb=P_BADGES.filter(x=>B[x[0]]).length,seasons=state.season-(b.season0||1)+1,boss=bpBoss();
+  const stat=(v,l)=>`<div><b>${v}</b><span>${l}</span></div>`;
+  let h=`<h2>Your playing career</h2><div class="card bpcardme" style="--cc:${state.club.color}"><div style="display:flex;gap:12px;align-items:center">${face(BY[me.sp],56,me.sh)}<div><b style="font-size:20px">${esc(me.nick)}</b> <span class="small muted">${esc(me.sp)}</span><div class="small">${ROLE_NAMES[me.pos[0]]} at ${esc(state.club.name)} · age ${me.age}</div><div class="small muted">Manager: ${esc(boss.name)}</div></div></div>
+    <div class="bpss" style="grid-template-columns:repeat(3,1fr)">${stat(seasons,"Seasons")}${stat((b.clubs||[state.club.name]).length,"Clubs")}${stat(nb,"Badges")}${stat(me.capps||0,"Career apps")}${stat(me.cg||0,"Career goals")}${stat(me.cmotm||0,"Player of the Match")}</div></div>`;
+  h+=`<div class="card"><div class="srk">Contract</div><p style="margin:4px 0 0">${money(me.wage)} a season, ${Math.max(0,(me.con||1)-1)} more season${(me.con||1)-1===1?"":"s"} after this one.</p>${b.drafted?`<p class="small muted" style="margin:4px 0 0">Drafted with pick ${b.drafted} by ${esc(b.club0||"")}.</p>`:""}</div>`;
+  h+=`<div class="card"><div class="srk">Clubs</div><div class="chips" style="margin:6px 0 0">${(b.clubs||[state.club.name]).map(n=>`<span class="chip" style="cursor:default">${esc(n)}</span>`).join("")}</div>${(state.loans||[]).some(l=>l.p===me)?`<p class="small muted" style="margin:6px 0 0">On loan at ${esc(bpLoan().club)} this season.</p>`:""}</div>`;
+  if((me.awards||[]).length)h+=`<div class="card"><div class="srk">Awards</div>${me.awards.map(a=>`<p class="small" style="margin:4px 0">🏆 ${esc(a)}</p>`).join("")}</div>`;
+  const rv=(state.reviews||[]).slice().reverse();if(rv.length)h+=`<div class="card"><div class="srk">Season by season</div>${rv.map(r=>`<div class="res" style="grid-template-columns:auto 1fr auto;gap:8px"><span class="small muted">S${r.season}</span><span>${esc(r.club)}</span><span class="small">${ord(r.pos)}</span></div>`).join("")}</div>`;
+  return h;}
 /* ---------- Be a Player: contract signing ceremony ---------- */
 function openContractShow(){if(!isBP()||document.querySelector(".csign"))return;const b=state.bp,mt=b.meet,me=bpMe();if(!mt||!me)return;const c=state.club,col=HEX.test(c.color||"")?c.color:"#2f7d4a",boss=bpBoss(),role=me.pos[0];
   const el=document.createElement("div");el.className="csign";el.style.setProperty("--cc",col);
@@ -3430,6 +3511,123 @@ function openContractShow(){if(!isBP()||document.querySelector(".csign"))return;
 function bpSignContract(){const b=state.bp,mt=b.meet,me=bpMe();if(!mt||!me)return "";me.wage=mt.wage;me.con=3;b.meet=null;inboxAdd("Squad","✍️","First contract signed",`${money(me.wage)} a season for 3 years at ${state.club.name}.`);
   if(bpNeedsLoan()){const opts=loanOffers().slice(0,3);if(opts.length){b.loanOffer={opts,why:"meet"};save();return "“Welcome aboard. Now, about your first season…”";}}
   save();return bpYouth()?"“Work hard in the youth team and you’ll get your chance.”":"“You’re in the first-team squad. Now win your place.”";}
+/* ---------- generated pixel sprites ---------- */
+const PXT={biped:["........","........","....bbbb","...bbbbb","...bbepb","...bbbbb","....bbbb",".....bbb","...bbbll","..bbbbll","..b.bbll","....bbll","....bbbb","....bb..","...bbb..","........"],
+ quad:["........","........","........","....bbbb","...bbbbb","...bepbb","...bbbbb","..bbbbbb",".bbbbbll",".bbbbbll",".bbbbbbl",".bbbbbbb","..bb..bb","..bb..bb","........","........"],
+ bird:["........","........","....bbbb","...bbbbb","...bepbb","...bbbbk","b...bbbb","bb.bbbll","bbbbbbll",".bbbbbll","..bbbbbl","...bbbbb","....bbbb",".....k.k","........","........"],
+ fish:["........","........","........",".....bbb","...bbbbb","..bbbbbb",".bbepbbb","bbbbbbll","bbbbbbll",".bbbbbll","..bbbbbb","...bbbbb",".....bbb","........","........","........"],
+ blob:["........","........","........","........",".....bbb","...bbbbb","..bbbbbb","..bepbbb",".bbbbbbb",".bbbbbll",".bbbbbll",".bbbbbbl","..bbbbbb","...bbbbb","........","........"]};
+const _SPX={};
+function pxHex(c,a){const n=parseInt(c.slice(1),16);let r=n>>16,g=n>>8&255,b=n&255;const f=v=>Math.max(0,Math.min(255,Math.round(a>0?v+(255-v)*a:v*(1+a))));return "#"+[f(r),f(g),f(b)].map(v=>v.toString(16).padStart(2,"0")).join("");}
+const PXF={
+ biped:[["....bbbb......","...bbbbbb.....","..bbbbbbbb....","..bepbbbbb....","..bppbbbbb....","..bbbbbbbb....","...bmbbbb.....","....bbbbb...t.","...bllbbbb..b.","...bllbbbbbbb.","....lbbbbbb...","....bb..bb....","...bbb..bbb..."],
+        ["....bbbb........","...bbbbbb.......","..bbbbbbbb......","..bepbbbbb......","..bppbbbbb......","..bbbbbbbb......","...bmbbbb.......","....bbbbbb....t.","...bbllbbbb...b.","..bb.llbbbbb.bb.","..k..llbbbbbbb..",".....lbbbbbb....",".....bbb.bbb....","....bbbb.bbbb..."]],
+ quad:[["..bbbb.........",".bbbbbb........",".bepbbbb.......",".bppbbbbbbbbb..","..bmbbbbbbbbbt.","...bbbllllbbb..","...bb.bb.bb.bb.","...bb.bb.bb.bb."],
+       [".bbbb...........","bbbbbb..........","bepbbbb.........","bppbbbbbbbbbbb..",".bmbbbbbbbbbbbbt","..bbbbbbbbbbbbb.","..bbbllllllbbbb.","..bbb.bbbb.bbb..","..bb..bb...bb...","..bb..bb...bb..."]],
+ bird:[["...bbbb...","..bbbbbb..",".kbepbbb..","kkbppbbb..","..bbbbbbw.","..lbbbbww.","..llbbbbw.","...bbbbt..","...k..k..."],
+       ["....bbbb......","...bbbbbb.....","..kbepbbb.....",".kkbppbbb.ww..","...bbbbbbwwww.","...lbbbbbwwwww","..llbbbbbbww..","..llbbbbbb....","...lbbbbb.....","....bbbbtt....","....k..k......"]],
+ fish:[["....bbb.....","..bbbbbbb..t",".bepbbbbbbtt",".bppbbbbbbbt",".bmbbllbbb.t","..bbllllb...","....bbb....."],
+       ["......bbbb.....","....bbbbbbbb..t","..bbbbbbbbbbbtt",".bepbbbbbbbbbtt",".bppbbbbbbbbbbt",".bmbbllllbbbb.t","..bbllllllbb...","...bbbllbbb....",".....bbbb......"]],
+ blob:[["...bbbb...","..bbbbbb..",".bbbbbbbb.",".bepbepbb.",".bppbppbb.",".bbbmmbbb.",".bllllbbb.","..bbbbbb.."],
+       ["....bbbbb....","..bbbbbbbbb..",".bbbbbbbbbbb.",".bbepbbbepbb.",".bbppbbbppbb.",".bbbbmmmbbbb.","bbllllllbbbbb","bbllllllbbbbb",".bbbbbbbbbbb.","..b.b.b.b.b.."]]};
+/* ---------- curated family designs, region by region ---------- */
+const PX_REGIONS=[1,2,3,4];
+const PX_TINTS=["#ff8a65","#ffd54f","#81c784","#4fc3f7","#9575cd","#f06292","#a1887f","#90a4ae"];
+const PX_HEAD=["earsP","earsR","horn1","horns2","crest","antenna","tuft","gem","none"],PX_BACK=["spikes","shell","sail","bulb","wing","none"],PX_TAIL=["long","flame","leaf","ball","fork","fin","none"],PX_PAT=["stripe","spots","back","belly","mask","solid"];
+let _PXD=null;
+function pxDesigns(){if(_PXD)return _PXD;_PXD={};if(!DEX_N)genInd();const roots=[...new Set(DEX_N.map(s=>pxFam(s.n).root))].filter(r=>BY[r]&&PX_REGIONS.includes(BY[r].g)).sort((a,b)=>(BY[a].g-BY[b].g)||a.localeCompare(b));
+  const used=new Set(),tintUse={};
+  roots.forEach(r=>{const S=BY[r],t=S.t,t0=t[0];let sd=0;for(const ch of r+"#k")sd=(sd*31+ch.charCodeAt(0))>>>0;const rnd=()=>{sd=(sd*1103515245+12345)>>>0;return (sd>>>8)/16777216;};
+    const archs=t.includes("Flying")?["bird"]:t0==="Water"?["fish","blob","quad","biped"]:["Ghost","Poison"].includes(t0)?["blob","biped","quad"]:["Ground","Rock","Steel"].includes(t0)?["quad","biped","blob"]:t0==="Bug"?["quad","blob","bird"]:["biped","quad","blob"];
+    const pk=a=>a[Math.floor(rnd()*a.length)];let d,key,g=0;
+    do{d={arch:archs[g<6?0:Math.floor(rnd()*archs.length)],head:pk(PX_HEAD),back:pk(PX_BACK),tail:pk(PX_TAIL),pat:pk(PX_PAT)};
+      if(t0==="Fire"&&rnd()<.6)d.tail="flame";if(t0==="Grass"&&rnd()<.5)d.back="bulb";if(t0==="Water"&&d.arch==="fish")d.tail="fin";if(d.arch==="fish"){d.back=d.back==="bulb"?"sail":d.back;}
+      key=[d.arch,d.head,d.back,d.tail].join("/");g++;}while(used.has(key)&&g<40);used.add(key);
+    const tu=tintUse[t0]=tintUse[t0]||[];let ti=Math.floor(rnd()*PX_TINTS.length),k=0;while(tu.includes(ti)&&k++<8)ti=(ti+1)%PX_TINTS.length;tu.push(ti);d.tint=PX_TINTS[ti];d.tintAmt=tu.length===1?.12:.3;_PXD[r]=d;});
+  return _PXD;}
+function pxMix(a,b,t){const A=parseInt(a.slice(1),16),B=parseInt(b.slice(1),16),f=(s)=>Math.round(((A>>s)&255)*(1-t)+((B>>s)&255)*t);return "#"+[f(16),f(8),f(0)].map(v=>v.toString(16).padStart(2,"0")).join("");}
+let _PRE=null;
+function pxFam(n){if(!_PRE){_PRE={};Object.entries(EVO).forEach(([a,e])=>(e.to||[]).forEach(b=>{if(!_PRE[b])_PRE[b]=a;}));}let r=n,d=0;while(_PRE[r]&&d<5){r=_PRE[r];d++;}return {root:r,stage:d,last:!(EVO[n]&&(EVO[n].to||[]).length)};}
+function pxSprite(s,sh){const key=s.n+(sh?"*":"");if(_SPX[key])return _SPX[key];const F=pxFam(s.n),R=BY[F.root]||s;
+  let sd=0;for(const ch of F.root)sd=(sd*31+ch.charCodeAt(0))>>>0;const rnd=()=>{sd=(sd*1103515245+12345)>>>0;return (sd>>>8)/16777216;};
+  const D=pxDesigns()[F.root];const rt=R.t,rt0=rt[0],arch=D?D.arch:rt.includes("Flying")?"bird":rt0==="Water"?(rnd()<.55?"fish":"blob"):["Ghost","Poison"].includes(rt0)?"blob":["Ground","Rock","Steel","Bug"].includes(rt0)?"quad":rt0==="Grass"?(rnd()<.5?"quad":"biped"):rnd()<.7?"biped":"quad";
+  const single=F.stage===0&&F.last,big=F.stage>0||single,fin=F.stage>=2||(F.stage>=1&&F.last&&!single&&F.stage>=1&&pxFam(F.root).root===F.root&&F.stage===1&&false);
+  const G=PXF[arch][big?1:0].map(r=>[...r]),H=G.length,W=Math.max(...G.map(r=>r.length));G.forEach(r=>{while(r.length<W)r.push(".");});
+  const pad=4,M=[];for(let y=0;y<H+pad*2;y++)M.push(Array(W+pad*2).fill("."));G.forEach((r,y)=>r.forEach((c,x)=>{M[y+pad][x+pad]=c;}));
+  const get=(x,y)=>(M[y]&&M[y][x])||".",set=(x,y,v)=>{if(M[y]&&x>=0&&x<M[y].length)M[y][x]=v;};
+  if(F.stage>=2){const add=[];M.forEach((r,y)=>r.forEach((c,x)=>{if(c!==".")return;const nb=[[x-1,y],[x+1,y],[x,y-1],[x,y+1]].filter(([a,b2])=>["b","l"].includes(get(a,b2))).length;if(nb>=2||(nb===1&&get(x,y-1)==="b"&&get(x,y+1)!=="."))add.push([x,y]);}));add.forEach(([x,y])=>set(x,y,"b"));}
+  const cells=[];M.forEach((r,y)=>r.forEach((c,x)=>{if(c!==".")cells.push([x,y,c]);}));const topY=Math.min(...cells.map(c=>c[1])),headX=M[topY].indexOf("b"),headX2=M[topY].lastIndexOf("b");
+  const tail=cells.filter(c=>c[2]==="t");const sty=s.t,has=t=>sty.includes(t),fv=rnd(),grow=F.stage>=2?2:F.stage>=1?1:0;
+  // family markings
+  const up=(x,y,n,v)=>{for(let k=1;k<=n;k++)set(x,y-k,v);};const eye=cells.find(c=>c[2]==="e");
+  if(D){const pat=D.pat;for(const [x,y,c] of cells){if(c!=="b")continue;if(pat==="stripe"&&(y-topY)%3===2&&x>headX2-1)set(x,y,"d");else if(pat==="spots"&&rnd()<.11+grow*.03)set(x,y,"d");else if(pat==="back"&&get(x,y-1)==="."&&y>topY+1)set(x,y,"d");}
+    if(pat==="mask"&&eye){set(eye[0]-1,eye[1],"d");set(eye[0]+2,eye[1],"d");set(eye[0]-1,eye[1]+1,"d");}if(pat==="belly")for(const [x,y,c] of cells)if(c==="l")set(x,y,"k2");
+    const hm=Math.round((headX+headX2)/2),n=1+grow;
+    ({earsP:()=>{up(headX,topY,n,"b");up(headX2,topY,n,"b");},earsR:()=>{set(headX,topY-1,"b");set(headX+1,topY-1,"b");set(headX2,topY-1,"b");set(headX2-1,topY-1,"b");if(grow)set(headX,topY-2,"b");},horn1:()=>up(hm,topY,n,"l"),horns2:()=>{up(headX,topY,n,"l");up(headX2,topY,n,"l");set(headX-1,topY-n,"l");},
+      crest:()=>{for(let k=-1;k<=1;k++)up(hm+k,topY,k?n:n+1,"d");},antenna:()=>{up(hm,topY,n+1,"o");set(hm-1,topY-n-1,"r");},tuft:()=>{up(hm,topY,1,"d");set(hm+1,topY-1,"d");if(grow)set(hm-1,topY-2,"d");},gem:()=>{set(hm,topY+1,"g2");if(grow)set(hm,topY,"g2");},none:()=>{}})[D.head]();
+    const backCells=cells.filter(([x,y,c])=>c==="b"&&get(x,y-1)==="."&&x>headX2&&y>topY+2),bx=backCells.length?backCells[Math.floor(backCells.length/2)]:null;
+    if(bx)({spikes:()=>backCells.forEach(([x,y],k)=>{if(k%2===0)up(x,y,1+(grow>1?1:0),"d");}),shell:()=>backCells.forEach(([x,y])=>{set(x,y,"d");set(x,y+1,"d");up(x,y,1,"d");}),sail:()=>{for(let k=0;k<2+grow;k++)up(bx[0]+k-1,bx[1],2+grow-Math.abs(k-1),"d");},
+      bulb:()=>{up(bx[0],bx[1],2+grow,"g");set(bx[0]-1,bx[1]-1,"g");set(bx[0]+1,bx[1]-1,"g");if(grow)set(bx[0]+1,bx[1]-2,"g");},wing:()=>{for(let k=0;k<2+grow;k++){set(bx[0]+k,bx[1]-1-k,"w");set(bx[0]+k,bx[1]-k,"w");}},none:()=>{}})[D.back]();
+    tail.forEach(([x,y])=>({long:()=>{set(x+1,y,"b");set(x+1,y-1,"b");if(grow)set(x+2,y-1,"b");},flame:()=>{set(x,y,"f");set(x,y-1,"k");set(x+1,y-1,"f");if(grow>=2){set(x,y-2,"f");set(x+1,y-2,"k");}},leaf:()=>{set(x,y,"g");set(x+1,y-1,"g");set(x,y-1,"g");},
+      ball:()=>{set(x,y,"d");set(x+1,y,"d");set(x,y-1,"d");set(x+1,y-1,"d");},fork:()=>{set(x+1,y-1,"b");set(x+1,y+1,"b");},fin:()=>{set(x,y,"l");set(x+1,y-1,"l");set(x+1,y+1,"l");},none:()=>{}})[D.tail]());}
+  else{const mk=fv<.33?"stripe":fv<.66?"spots":"back";for(const [x,y,c] of cells){if(c!=="b")continue;if(mk==="stripe"&&y%3===0&&rnd()<.6)set(x,y,"d");else if(mk==="spots"&&rnd()<.1+grow*.03)set(x,y,"d");else if(mk==="back"&&get(x,y-1)==="."&&y>topY+1&&rnd()<.7)set(x,y,"d");}}
+  // type features, bigger at later stages
+  if(!D&&has("Fire")){tail.forEach(([x,y])=>{set(x,y,"f");set(x,y-1,"k");if(grow>=1)set(x+1,y-1,"f");if(grow>=2){set(x,y-2,"f");set(x+1,y-2,"k");}});if(!tail.length)up(headX+1,topY,1+grow,"f");}
+  if(!D&&has("Grass")){const bx=Math.round((headX2+M[topY+4].lastIndexOf("b"))/2)+1;up(bx,topY+3,1+grow,"g");set(bx+1,topY+2-grow,"g");if(grow>=1)set(bx-1,topY+2-grow,"g");}
+  if(!D&&has("Water")){const fx=headX2;up(fx,topY+1,1+grow,"l");if(grow>=2)up(fx-1,topY,1,"l");tail.forEach(([x,y])=>set(x,y,"l"));}
+  if(!D&&has("Electric")){up(headX,topY,1+grow,"b");set(headX,topY-1-grow,"o");up(headX2,topY,grow,"b");}
+  if(!D&&has("Dragon")){up(headX+1,topY,1+grow,"l");if(grow)set(headX,topY-1-grow,"l");}
+  if(!D&&has("Psychic"))set(headX,topY+1,"g2");
+  if(!D&&has("Bug")){set(headX,topY-1,"o");set(headX-1,topY-2,"o");if(grow)set(headX-2,topY-3,"o");}
+  if(!D&&has("Ice")){up(headX+1,topY,1+grow,"l");up(headX2,topY,1+Math.max(0,grow-1),"l");}
+  if(!D&&has("Fighting")){const ey=cells.find(c=>c[2]==="e");if(ey)for(let x=0;x<M[0].length;x++)if(get(x,ey[1]-1)==="b")set(x,ey[1]-1,"r");}
+  if(!D&&has("Dark")){const ey=cells.find(c=>c[2]==="e");if(ey){set(ey[0]-1,ey[1],"d");set(ey[0]+2,ey[1],"d");}}
+  if(!D&&has("Fairy")){const ey=cells.find(c=>c[2]==="e");if(ey)set(ey[0]+2,ey[1]+1,"g2");}
+  if(!D&&has("Steel"))for(const [x,y,c] of cells)if(get(x,y)==="b"&&(x+y)%5===0)set(x,y,"l");
+  if((has("Flying")&&arch!=="bird")){const wx=Math.round((headX2+M[0].length-pad)/2),wy=topY+5;for(let k=0;k<2+grow;k++){set(wx+k,wy-k,"w");set(wx+k,wy-k+1,"w");}}
+  if(!D&&grow>=2&&!has("Fire")&&!has("Water")){for(const [x,y,c] of cells)if(c==="b"&&get(x,y-1)==="."&&y>topY+2&&x>headX2&&rnd()<.5)set(x,y-1,"d");}
+  let body=TC[sty[0]===rt0?rt0:sty[0]]||"#a8a878";if(D)body=pxMix(body,D.tint,D.tintAmt);body=pxHex(body,(rnd()-.5)*.26-grow*.07);if(sh)body=pxHex("#f8d030",(rnd()-.5)*.3);
+  const mc=sty[1]&&!sh?pxHex(TC[sty[1]]||body,-.06):pxHex(body,-.36);
+  const pal={b:body,k2:"#f6e6b4",l:pxHex(body,.42),d:mc,t:body,e:"#ffffff",p:"#0a0a0e",m:"#2a1a1a",k:"#ffd23f",f:"#ff6a2a",g:"#3fbf4a",g2:"#ff4fa8",o:"#20232b",r:"#e83a3a",w:pxHex(mc,.15)},out="#0e0f13";
+  const xs=[],ys=[];M.forEach((r,y)=>r.forEach((c,x)=>{if(c!=="."&&pal[c]){xs.push(x);ys.push(y);}}));const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
+  const S=Math.max(22,Math.max(x1-x0,y1-y0)+3),cv=document.createElement("canvas");cv.width=S;cv.height=S;const g=cv.getContext("2d"),ox=Math.floor((S-(x1-x0+1))/2)-x0,oy=S-2-y1;
+  const filled=(x,y)=>{const c=get(x,y);return c!=="."&&!!pal[c];};
+  for(let y=y0-1;y<=y1+1;y++)for(let x=x0-1;x<=x1+1;x++){if(filled(x,y))continue;if(filled(x-1,y)||filled(x+1,y)||filled(x,y-1)||filled(x,y+1)){g.fillStyle=out;g.fillRect(x+ox,y+oy,1,1);}}
+  for(let y=y0;y<=y1;y++)for(let x=x0;x<=x1;x++){const c=get(x,y);if(c==="."||!pal[c])continue;g.fillStyle=pal[c];g.fillRect(x+ox,y+oy,1,1);}
+  return _SPX[key]=cv.toDataURL();}
+function iconMode(){try{return localStorage.getItem("pokefc_icons")||"auto";}catch(e){return "auto";}}
+const useSprites=()=>{const m=iconMode();return m==="sprite"||(m==="auto"&&getSkin()==="pixel");};
+const pxImg=(s,sz,sh)=>`<img class="pxspr" src="${pxSprite(s,sh)}" alt="" width="${sz}" height="${sz}">`;
+/* ---------- pixel-art pitch ---------- */
+const _PXP={};
+function pixelPitch(cols,rows,opt){opt=opt||{};const land=!!opt.land,lines=opt.lines!==false,key=[cols,rows,land,lines].join("/");if(_PXP[key])return _PXP[key];
+  const cv=document.createElement("canvas");cv.width=cols;cv.height=rows;const g=cv.getContext("2d");const LEN=land?cols:rows,WID=land?rows:cols;
+  const put=(l,w,col)=>{l=Math.round(l);w=Math.round(w);if(l<0||w<0||l>=LEN||w>=WID)return;g.fillStyle=col;land?g.fillRect(l,w,1,1):g.fillRect(w,l,1,1);};
+  const G1="#5cc15c",G2="#4cae4c",TD="#3f9a3f",TL="#7fd67f",FL=["#ffe066","#ff8fb1","#ffffff"],WH="#f6fff4",T=4;
+  for(let l=0;l<LEN;l++)for(let w=0;w<WID;w++)put(l,w,(Math.floor(l/T)+Math.floor(w/T))%2?G1:G2);
+  let sd=1234;const rnd=()=>{sd=(sd*9301+49297)%233280;return sd/233280;};
+  for(let i=0;i<LEN*WID/28;i++){const l=rnd()*LEN,w=rnd()*WID,r=rnd();put(l,w,r<.45?TD:r<.9?TL:pick(FL));}
+  if(lines){const m=2,L0=m,L1=LEN-1-m,W0=m,W1=WID-1-m,PL=L1-L0,PW=W1-W0,ln=(a,b,w)=>{for(let l=Math.min(a,b);l<=Math.max(a,b);l++)put(l,w,WH);},wn=(l,a,b)=>{for(let w=Math.min(a,b);w<=Math.max(a,b);w++)put(l,w,WH);};
+    wn(L0,W0,W1);wn(L1,W0,W1);ln(L0,L1,W0);ln(L0,L1,W1);const mid=Math.round((L0+L1)/2);wn(mid,W0,W1);
+    const cl=mid,cw=Math.round((W0+W1)/2),R=Math.max(3,Math.round(PW*.13));let x=R,y=0,e=1-R;while(x>=y){[[x,y],[y,x],[-x,y],[-y,x],[x,-y],[y,-x],[-x,-y],[-y,-x]].forEach(([a,b])=>put(cl+a,cw+b,WH));y++;if(e<0)e+=2*y+1;else{x--;e+=2*(y-x)+1;}}
+    put(cl,cw,WH);
+    [[L0,1],[L1,-1]].forEach(([e0,sg])=>{const bw0=W0+Math.round(PW*.28),bw1=W0+Math.round(PW*.72),bd=Math.round(PL*.16),sw0=W0+Math.round(PW*.4),sw1=W0+Math.round(PW*.6),sd2=Math.max(2,Math.round(PL*.06));
+      ln(e0,e0+sg*bd,bw0);ln(e0,e0+sg*bd,bw1);wn(e0+sg*bd,bw0,bw1);ln(e0,e0+sg*sd2,sw0);ln(e0,e0+sg*sd2,sw1);wn(e0+sg*sd2,sw0,sw1);put(e0+sg*Math.round(PL*.11),cw,WH);
+      const gw0=W0+Math.round(PW*.44),gw1=W0+Math.round(PW*.56);for(let k=1;k<=m;k++)for(let w=gw0;w<=gw1;w++)put(e0-sg*k,w,(k+w)%2?WH:"#c9d3cc");});}
+  return _PXP[key]=cv;}
+const pixelURL=(c,r,o)=>{const k="u"+[c,r,o&&o.land,o&&o.lines].join("/");return _PXP[k]||(_PXP[k]=pixelPitch(c,r,o).toDataURL());};
+function applyPixelPitchCSS(){try{document.documentElement.style.setProperty("--pxgrass",`url(${pixelURL(34,47,{lines:false})})`);}catch(e){}}
+/* ---------- Be a Player: ability edges in key moments ---------- */
+const BP_ABE={Blaze:["pinch",.08,"Shots get +8% when you’re behind, or level late on"],Torrent:["pinch",.08,"Shots get +8% when you’re behind, or level late on"],Overgrow:["pinch",.08,"Shots get +8% when you’re behind, or level late on"],Swarm:["pinch",.08,"Shots get +8% when you’re behind, or level late on"],
+  "Swift Swim":["rain",.08,"Runs and dribbles get +8% in the rain"],Chlorophyll:["sun",.08,"Runs and dribbles get +8% in harsh sun"],Intimidate:["def",.06,"Tackles and blocks get +6%"],Technician:["flair",.08,"Chips and curlers get +8%"],Static:["foul",.06,"Winning fouls and penalties gets +6%"],
+  Sturdy:["block",.08,"Blocks get +8%"],"Shell Armor":["block",.06,"Blocks get +6%"],"Battle Armor":["block",.06,"Blocks get +6%"],Levitate:["air",.08,"Headers and aerial duels get +8%"],"Speed Boost":["late",.05,"Runs and shots get +5% after the hour"],
+  "Keen Eye":["pass",.06,"Passes get +6%"],Sniper:["shot",.05,"Shots get +5%"],"Super Luck":["shot",.05,"Shots get +5%"],"Huge Power":["shot",.05,"Shots get +5%"],"Pure Power":["shot",.05,"Shots get +5%"],Guts:["guts",.08,"Everything gets +8% once you’re on a yellow card"],
+  "Inner Focus":["late",.04,"Stays calm: +4% on everything after the hour"],"Own Tempo":["late",.04,"Stays calm: +4% on everything after the hour"],Pressure:["def",.05,"Tackles, blocks and saves get +5%"],Scrappy:["def",.05,"Tackles and blocks get +5%"],"Early Bird":["early",.06,"Everything gets +6% in the first 20 minutes"],"Run Away":["run",.06,"Runs and dribbles get +6%"],Hustle:["run",.08,"Runs and dribbles get +8%"]};
+function bpAbEdge(ab,o,c,min,mid){const e=BP_ABE[ab];if(!e||o.w==="keep")return 0;const [k,v]=e,s=bpSide(c),d=c.g[s]-c.g[1-s],run=o.w==="chance"||o.w==="hold"||o.w==="intercept",shot=o.w==="goal";
+  const ok={pinch:shot&&(d<0||(d===0&&min>=70)),rain:run&&c.wx==="rain",sun:run&&c.wx==="sun",def:["tackle","block","save"].includes(o.w),flair:shot&&!!o.bn,foul:o.w==="fkwon"||o.w==="penwon",block:o.w==="block",air:["header","aerial","attcorner","cross"].includes(mid),
+    late:min>=60&&(k!=="late"||ab!=="Speed Boost"||run||shot),pass:o.w==="assist",shot,guts:((c.tally.get(bpOnPitch(c)&&bpOnPitch(c).p)||{}).y||0)>=1,early:min<=20,run}[k];return ok?v:0;}
+function bpApplyAb(c,min,mid,mo){const x=bpOnPitch(c);if(!x||!x.p.ab)return;mo.o.forEach(o=>{if(o.spot||o.gk||o.so!==undefined)return;const v=bpAbEdge(x.p.ab,o,c,min,mid);if(v){o.p=clamp(o.p+v,.05,.92);o.ab=`${x.p.ab} +${Math.round(v*100)}%`;}});}
+function bpAbHTML(me){const a=ABIL[me.ab]||{},e=BP_ABE[me.ab],rare=!speciesAbilities(me.sp).includes(me.ab);return `<div class="small"><b>✨ ${esc(me.ab||"No ability")}</b>${rare?` <span class="mtag bp">Rare</span>`:""}${a.d?` · ${esc(a.d)}`:""}${e?`<div class="small muted">In key moments: ${esc(e[2])}.</div>`:""}</div>`;}
 /* ---------- Be a Player: backstory and draft day ---------- */
 const BP_HOMES={Water:"Cerulean,Vermilion,Seafoam,Cianwood,Olivine,Whirl Islands,Lake of Rage,Slateport,Lilycove,Dewford,Sootopolis,Pastoria,Canalave,Sunyshore,Lake Verity",Fire:"Cinnabar,Fiery Path,Lavaridge,Fuego Ironworks,Mt. Silver",Grass:"Celadon,Viridian,Ilex Forest,Azalea,Petalburg Woods,Fortree,Verdanturf,Eterna,Floaroma,Great Marsh",Bug:"Viridian,Ilex Forest,Azalea,Petalburg Woods,Eterna,Floaroma",
   Rock:"Pewter,Mt. Moon,Rock Tunnel,Union Cave,Granite Cave,Rustboro,Oreburgh,Mt. Coronet",Ground:"Pewter,Rock Tunnel,Mt. Moon,Union Cave,Fallarbor,Granite Cave,Oreburgh,Mt. Coronet",Steel:"Olivine,Mt. Moon,Rustboro,Canalave,Iron Island,Oreburgh",Electric:"Vermilion,Power Plant,Mauville,Sunyshore,Valley Windworks",
@@ -3438,19 +3636,20 @@ const BP_HOMES={Water:"Cerulean,Vermilion,Seafoam,Cianwood,Olivine,Whirl Islands
 const BP_TYPELINE={Water:"Swimming against the tide every morning built legs that never tire.",Fire:"Training on hot volcanic rock taught them to play with real fire.",Grass:"Hours dribbling through the long grass gave them close control.",Bug:"Darting between the trees taught them to change direction in a flash.",Rock:"Kicking stones around the quarries made their shooting rock-hard.",Ground:"Running the dusty tracks built a sturdy base nobody can knock off the ball.",Steel:"Shifts at the docks and ironworks built a frame like steel.",Electric:"Kickabouts beside the power lines gave them a crackling burst of pace.",Psychic:"They seem to know where the ball is going before anyone else.",Fairy:"Crowds always gather to watch them play, just for the joy of it.",Ghost:"They have a habit of appearing in the box when nobody sees them coming.",Dark:"Back-alley games taught them every trick in the book.",Ice:"Practising on frozen ponds gave them perfect balance.",Dragon:"Their family has produced champions for generations, and expectations are high.",Flying:"Leaping for headers off the cliffs gave them a spring in their step.",Fighting:"Dojo training means they never back down from a challenge.",Poison:"Wading through the marshes made them tough to shake off.",Normal:"Street football in the town square, every day after school."};
 const BP_NOTE={PAC:"electric pace",POW:"a thunderous shot",SKL:"silky close control",TKL:"a fearless tackle",RDG:"a veteran’s reading of the game",STA:"endless stamina"};
 function bpStory(b,me){const s=BY[me.sp],reg=s.g>=1&&s.g<=4?s.g:b.reg,stage=bpStage(b.sp),t=s.t[0],towns=REG_TOWNS[reg].split(","),pref=(BP_HOMES[t]||BP_HOMES.Normal).split(",").filter(x=>towns.includes(x)),home=pick(pref.length?pref:towns),nm=me.nick;
-  const T={"First stage":[`${nm} hatched at the Day Care near ${home} and spent every afternoon chasing a football across the fields with the local kids.`,`Growing up in ${home}, ${nm} learned the game kicking Oran Berries against the Pokémon Center wall until the nurse asked them to stop.`,`A scout first spotted ${nm} dribbling round wild Pokémon in the long grass outside ${home}, and came back every week after that.`],
-    "Middle stage":[`${nm} evolved early after years of training at the ${home} gym, and the extra power showed straight away on the pitch.`,`A late starter, ${nm} came to football after a few seasons battling trainers on the routes around ${home}. The battles taught them to keep a cool head.`],
-    "Final stage":[`Already fully evolved, ${nm} spent years on the Battle Tower circuit before trying football in ${home}’s Sunday league. They never looked back.`,`${nm} only ever played for fun in ${home} until a video of a 40-yard strike went viral and the scouts came calling.`],
-    "Single stage":[`${nm} is one of a kind: no evolutions to wait for, just raw talent sharpened in the parks of ${home}.`,`In ${home} they still talk about the day ${nm} beat the whole school team on their own.`]}[stage]||[`${nm} grew up in ${home}.`];
+  const T={"First stage":[`${nm} spent childhood summers ball-boying at the ${home} stadium, studying every first-team player.`,`The ${home} Pokémon Center nurse still has the window ${nm} broke with a volley at age six.`,`${nm} was the smallest player in the ${home} junior league, and the one everyone wanted on their team.`,`Every morning ${nm} raced the Pidgey along the path out of ${home}, ball at their feet. They usually won.`,`${nm} hatched at the Day Care near ${home} and spent every afternoon chasing a football across the fields with the local kids.`,`Growing up in ${home}, ${nm} learned the game kicking Oran Berries against the Pokémon Center wall until the nurse asked them to stop.`,`A scout first spotted ${nm} dribbling round wild Pokémon in the long grass outside ${home}, and came back every week after that.`],
+    "Middle stage":[`${nm} evolved mid-match in a youth final in ${home}, and scored the winner two minutes later.`,`After evolving, ${nm} outgrew the ${home} youth side almost overnight. The club had to find them a bigger challenge.`,`${nm} worked the ferries out of ${home} and played on the docks at lunchtime until a coach spotted them.`,`${nm} evolved early after years of training at the ${home} gym, and the extra power showed straight away on the pitch.`,`A late starter, ${nm} came to football after a few seasons battling trainers on the routes around ${home}. The battles taught them to keep a cool head.`],
+    "Final stage":[`${nm} spent years as a gym leader’s training partner in ${home} before deciding football was their real calling.`,`${nm} was a Pokémon Ranger near ${home}, playing pick-up games with rangers on their days off. One of them knew a scout.`,`A late bloomer from ${home}: ${nm} only took football seriously after a bet with a friend, and never looked back.`,`Already fully evolved, ${nm} spent years on the Battle Tower circuit before trying football in ${home}’s Sunday league. They never looked back.`,`${nm} only ever played for fun in ${home} until a video of a 40-yard strike went viral and the scouts came calling.`],
+    "Single stage":[`Nobody in ${home} had seen a Pokémon like ${nm} play before. Crowds started turning up just to watch them train.`,`${nm} taught themselves the game on the beaches near ${home}, copying moves from old match tapes.`,`${nm} is one of a kind: no evolutions to wait for, just raw talent sharpened in the parks of ${home}.`,`In ${home} they still talk about the day ${nm} beat the whole school team on their own.`]}[stage]||[`${nm} grew up in ${home}.`];
   const best=BP_ATTR.slice().sort((a,z)=>pAttr(me,z)-pAttr(me,a))[0];
-  return {home,reg,stage,text:pick(T),type:BP_TYPELINE[t]||"",note:`${ROLE_NAMES[me.pos[0]]} with ${BP_NOTE[best]}. ${stage==="First stage"?`Evolves into ${evoTargets(me.sp).join(" or ")} at level ${(EVO[me.sp]||{}).lv||"?"}: one to watch.`:stage==="Middle stage"?`Still one evolution to come.`:`What you see is what you get, and it’s a lot.`}`};}
-function bpStoryHTML(st){return `<p style="margin:0 0 8px">${esc(st.text)}</p>${st.type?`<p style="margin:0 0 8px">${esc(st.type)}</p>`:""}<p class="small" style="margin:0"><b>Scout’s note:</b> ${esc(st.note)}</p>`;}
+  const Q=["Superstitious: always puts the left boot on first.","Collects every match ball they score with.","Hums battle music before kick-off.","Never misses an extra session, even on rest days.","Talks to the ball. Teammates have stopped asking why.","Insists on a Berry smoothie at half-time.","Learned to read the game by watching Pokémon battles.","Still writes to their first coach after every match.","Sleeps with the club scarf on the night before games.","Has a lucky Poké Ball keyring sewn into their kit bag."];
+  return {home,reg,stage,text:pick(T),quirk:pick(Q),type:BP_TYPELINE[t]||"",note:`${ROLE_NAMES[me.pos[0]]} with ${BP_NOTE[best]}. ${stage==="First stage"?`Evolves into ${evoTargets(me.sp).join(" or ")} at level ${(EVO[me.sp]||{}).lv||"?"}: one to watch.`:stage==="Middle stage"?`Still one evolution to come.`:`What you see is what you get, and it’s a lot.`}`};}
+function bpStoryHTML(st){return `<p style="margin:0 0 8px">${esc(st.text)}</p>${st.type?`<p style="margin:0 0 8px">${esc(st.type)}</p>`:""}${st.quirk?`<p class="small" style="margin:0 0 8px"><b>Quirk:</b> ${esc(st.quirk)}</p>`:""}<p class="small" style="margin:0"><b>Scout’s note:</b> ${esc(st.note)}</p>`;}
 function openDraftShow(){if(!isBP())return;const b=state.bp,me=bpMe();if(!me)return;const st=b.story||(b.story=bpStory(b,me));const c=state.club,col=HEX.test(c.color||"")?c.color:"#2f7d4a",drafted=!!b.drafted,role=me.pos[0];
   const el=document.createElement("div");el.className="dday";el.style.setProperty("--cc",col);
   el.innerHTML=`<div class="ddin"><div class="ddk">${drafted?"Draft day":"Signing day"}</div><div class="ddsub">${REGION[state.reg]} League</div>
     ${drafted?`<div class="ddpick"><span>Pick</span><b id="ddn">1</b></div>`:""}
     <div class="ddsel">${drafted?`With pick ${b.drafted},`:""}<div class="ddclub">${crestSVG(c,52)}<b>${esc(c.name)}</b></div>${drafted?"select":"have signed"}</div>
-    <div class="ddcard"><div class="ddface">${face(BY[me.sp],84,me.sh)}</div><div class="ddname">${esc(me.nick)}</div><div class="ddsp">${esc(me.sp)} · ${ROLE_NAMES[role]} · rated ${pr(me,role)}</div><div class="ddhome">From ${esc(st.home)}, ${REGION[st.reg]}</div></div>
+    <div class="ddcard"><div class="ddface">${face(BY[me.sp],84,me.sh)}</div><div class="ddname">${esc(me.nick)}</div><div class="ddsp">${esc(me.sp)} · ${ROLE_NAMES[role]} · rated ${pr(me,role)}</div><div class="ddhome">From ${esc(st.home)}, ${REGION[st.reg]}</div><div class="ddab">✨ ${esc(me.ab||"")}${me.ab&&!speciesAbilities(me.sp).includes(me.ab)?" (rare)":""}</div></div>
     <div class="ddstory">${bpStoryHTML(st)}<p class="small" style="margin:8px 0 0"><b>Where you start:</b> ${b.startNote==="first"?"straight into the first-team squad.":b.startNote==="loan"?"the youth team, and the club would like you to go out on loan for regular football.":"the youth team. Impress in training to earn a first-team call-up."}</p></div>
     <button class="btn" id="ddGo">Begin my career</button></div>`;
   document.body.appendChild(el);try{SFX.fanfare();}catch(x){}
@@ -3477,14 +3676,14 @@ function bpEndSeason(myA){if(!isBP())return;const b=state.bp,me=bpMe();if(!me)re
   const prevSp=b.spStart||me.sp;b.rev={season:state.season,club:state.club.name,lg:leagueName(state.div),pos:myA,apps:me.apps||0,goals:me.goals||0,ast:me.ast||0,avg:Math.round(bpAvg(me)*100)/100,motm:me.motm||0,lv:lvOf(me),sp:me.sp,evo:prevSp!==me.sp?prevSp:null,age:me.age,pots:((state.history||[]).slice(-1)[0]||{}).pots===me.nick,cap:!!b.cap,trust:Math.round(b.trust),star:Math.round(b.star),con:me.con};
   b.revPending=state.season;b.spStart=me.sp;
   if(b.cap&&b.trust<40){b.cap=false;b.capLost=true;}
-  if(isRegion()&&!b.wantOut){const r=pr(me,me.pos[0]),lv=bpXIlevel();let why=null;if((b.star>=55||r>=lv+3)&&Math.random()<clamp(b.star/180+(r-lv)/25,.1,.75))why="up";else if(me.age>=23&&r<lv-6&&Math.random()<.5)why="surplus";
+  if(isRegion()&&!b.wantOut&&(me.cs||0)<=state.season-1){const r=pr(me,me.pos[0]),lv=bpXIlevel();let why=null;if(b.star>=65&&r>=lv+2&&Math.random()<.25)why="up";else if(me.age>=24&&r<lv-8&&Math.random()<.35)why="surplus";
     if(why){b.wantOut=true;b.bidNote=why;inboxAdd("Squad",why==="up"?"💰":"🔁",why==="up"?"Bigger clubs want you":"The club will let you go",why==="up"?`Clubs have bid for you and ${state.club.name} are willing to sell. Check your summer on the Me tab.`:`${state.club.name} have agreed to sell you so you can play regularly. Check your summer on the Me tab.`);}}
   b.off={};if(me.con<=1){const want=b.trust>=35||bpSeasonAvg()>=6.6;b.off.contract=want?{wage:capW(Math.round(Math.max(me.wage*1.05,wageOf(me)*.7*(1+b.star/200))/5e3)*5e3),yrs:me.age>=30?1+ri(0,1):ri(2,4),asked:false}:{released:true};}
-  if(b.wantOut||(b.off.contract&&b.off.contract.released))b.off.offers=bpClubOffers(b.bidNote==="up"?2:3,pr(me,me.pos[0])+(b.bidNote==="up"?10:b.bidNote==="surplus"?0:6));
+  if(b.wantOut||(b.off.contract&&b.off.contract.released))b.off.offers=bpClubOffers(b.bidNote?1:3,pr(me,me.pos[0])+(b.bidNote==="up"?10:b.bidNote==="surplus"?0:6));
   if(me.age>=35)b.off.mustRetire=true;}
 function bpBlocked(){const o=(state.bp||{}).off||{};return !!(o.contract&&!o.contract.done)||!!(o.offers&&o.offers.length&&!o.pickDone&&(o.contract?o.contract.released||o.contract.leave:true))||(o.mustRetire&&!o.retired)||(o.retiring&&!o.retired);}
-function bpMove(o){const me=bpMe();["xi","bench"].forEach(z=>{state[z]=state[z].map(p=>p===me?null:p);});state.res=(state.res||[]).filter(p=>p!==me);const n0=state.news.length;
-  if(o.kind==="same")takeJob(o.k);else takeJobX({r:o.r,d:o.d,k:o.k});state.news=state.news.slice(0,n0).concat([`${me.nick} joined ${state.club.name}.`]);
+function bpMove(o){const me=bpMe();if(!me)return;state.loans=(state.loans||[]).filter(l=>l.p!==me);const snap=JSON.stringify(state);["xi","bench"].forEach(z=>{state[z]=state[z].map(p=>p===me?null:p);});state.res=(state.res||[]).filter(p=>p!==me);const n0=state.news.length;
+  try{if(o.kind==="same")takeJob(o.k);else takeJobX({r:o.r,d:o.d,k:o.k});}catch(err){console.error("move failed",err);state=JSON.parse(snap);toast("That move fell through. You’re staying put.");return;}state.news=state.news.slice(0,n0).concat([`${me.nick} joined ${state.club.name}.`]);
   let wj=-1;state.bench.forEach((q,j)=>{if(!q||wj<0||bestRoleP(q)[1]<bestRoleP(state.bench[wj])[1])wj=j;});if(wj<0)wj=0;if(state.bench[wj])toFA(state.bench[wj]);state.bench[wj]=me;
   const b=state.bp;b.trust=50;b.chem=40;b.cap=false;b.wantOut=null;b.sellNote=null;b.bidNote=null;b.loanSeasons=0;b.loanNeg=null;b.promise=0;me.cs=state.season+1;b.clubs=[...new Set([...(b.clubs||[]),state.club.name])];if(o.kind==="x")bpF().abroad=1;bpBadgeScan();bpPickXI();}
 function bpRetire(o){const me=bpMe(),b=state.bp,P=bpPrestige(),nm=me.nick;["xi","bench"].forEach(z=>{state[z]=state[z].map(p=>p===me?null:p);});state.res=(state.res||[]).filter(p=>p!==me);
@@ -3502,7 +3701,7 @@ function bpOffCard(){const b=state.bp,o=b.off||{},me=bpMe();let h=`<h2>Your summ
     else if(!c.done)h+=`<div class="card bps-bench"><div class="srk">Contract talks</div><p style="margin:4px 0 8px">${esc(state.club.name)} offer <b>${money(c.wage)} a season for ${c.yrs} year${c.yrs>1?"s":""}</b>.</p><div class="bpplay"><button class="btn" data-act="bpcon" data-k="yes">Sign it</button><button class="btn ghost" data-act="bpcon" data-k="more" ${c.asked?"disabled":""}>Ask for more</button><button class="btn ghost" data-act="bpcon" data-k="leave">Leave on a free</button></div></div>`;
     else h+=`<div class="card"><p class="small" style="margin:0">✅ ${c.leave||c.released?"You’re moving on this summer.":`Signed: ${money(me.wage)} a season.`}</p></div>`;}
   const needPick=o.offers&&o.offers.length&&!o.pickDone&&(!o.contract||o.contract.released||o.contract.leave||b.wantOut);
-  if(needPick){h+=`<div class="srk" style="margin:10px 2px 4px">Clubs that want you</div>${b.bidNote==="up"?`<p class="small muted" style="margin:0 2px 6px">💰 These clubs have bid for you, and ${esc(state.club.name)} are willing to sell for around ${money(valueOf(me))}. Take the step up, or turn it down and stay.</p>`:b.bidNote==="surplus"?`<p class="small muted" style="margin:0 2px 6px">${esc(state.club.name)} have agreed to let you go so you can play regularly. You can still stay and fight for your place.</p>`:b.sellNote?`<p class="small muted" style="margin:0 2px 6px">After your loan spells, ${esc(state.club.name)} will let you go so you can play first-team football. Join one of these clubs, or stay and keep fighting for your place.</p>`:""}`+o.offers.map((x,i)=>offerRow(x,"bpmove",i)).join("");if(!(o.contract&&(o.contract.released||o.contract.leave)))h+=`<button class="btn ghost" data-act="bpstay">Stay where you are</button>`;}
+  if(needPick){h+=`<div class="srk" style="margin:10px 2px 4px">${b.bidNote?"A bid for you":"Clubs that want you"}</div>${b.bidNote==="up"?`<p class="small muted" style="margin:0 2px 6px">💰 A bigger club has bid around ${money(valueOf(me))} for you, and ${esc(state.club.name)} have accepted. Do you want to go?</p>`:b.bidNote==="surplus"?`<p class="small muted" style="margin:0 2px 6px">${esc(state.club.name)} have accepted an offer for you so you can play regularly. Do you want to go?</p>`:b.sellNote?`<p class="small muted" style="margin:0 2px 6px">After your loan spells, ${esc(state.club.name)} will let you go so you can play first-team football. Join one of these clubs, or stay and keep fighting for your place.</p>`:""}`+o.offers.map((x,i)=>offerRow(x,"bpmove",i)).join("");if(!(o.contract&&(o.contract.released||o.contract.leave)))h+=`<button class="btn ghost" data-act="bpstay">Stay where you are</button>`;}
   const canRetire=me&&me.age>=31&&!o.retired;
   if(o.mustRetire||o.retiring){const P=bpPrestige();o.mgr=o.mgr||bpMgrOffers();h+=`<div class="card bps-bench"><div class="srk">Retirement</div><p style="margin:4px 0 4px">${o.mustRetire?"At 35, it’s time to hang up your boots.":"You’ve decided to retire."} Your playing prestige is <b>${P}</b>.</p><p class="small muted" style="margin:0 0 6px">Clubs want you as their manager. Choose one to start your management career.</p></div>`+o.mgr.map((x,i)=>offerRow(x,"bpret",i,x.kind==="stay"?`<div class="small">Your current club</div>`:"")).join("")+(o.retiring&&!o.mustRetire?`<button class="btn ghost" data-act="bpretno">Keep playing</button>`:"");}
   else if(canRetire)h+=`<button class="btn ghost" data-act="bpretyes" style="margin-top:8px">Retire and move into management</button>`;
@@ -3699,7 +3898,7 @@ function bpMoment(c,min){const x=bpOnPitch(c);if(!x)return null;const me=x.p,rol
   c.bpUsed=c.bpUsed||[];const recent=b.recentM||[],ALLM=BP_MOMENTS.concat(BP_NEW);let pool=ALLM.filter(m=>m.r.includes(role)&&!c.bpUsed.includes(m.id));if(!pool.length)pool=ALLM.filter(m=>m.r.includes(role));if(!pool.length)return null;
   const m=pool[wpick(pool.map(q=>q.w*(recent.includes(q.id)?.35:1)))];c.bpUsed.push(m.id);b.recentM=[...recent,m.id].slice(-8);const B=bpOptB(A,P,b,hot),mo=m.mk(A,P,b,mm,hot,bk,B),ctxl=bpSituation(c,min);if(ctxl)mo.ctx=ctxl;
   if(!mo.all){const ex=BP_EXTRA[m.id]?BP_EXTRA[m.id](A,P,b,B):[];let all=mo.o.concat(ex);for(let i=all.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[all[i],all[j]]=[all[j],all[i]];}
-    let pick3=all.slice(0,3);if(pick3.every(o=>o.w==="keep")){const d=all.find(o=>o.w!=="keep");if(d)pick3[2]=d;}mo.o=pick3;}return mo;}
+    let pick3=all.slice(0,3);if(pick3.every(o=>o.w==="keep")){const d=all.find(o=>o.w!=="keep");if(d)pick3[2]=d;}mo.o=pick3;}bpApplyAb(c,min,m.id,mo);return mo;}
 function bpSituation(c,min){const s=bpSide(c),my=c.g[s],th=c.g[1-s],d=my-th,sc=`${my}–${th}`,L=[];
   if(min>=85){L.push(d<0?`Chasing the game, ${sc} down with time running out.`:d===0?`Level at ${sc} in the dying minutes.`:d===1?`Protecting a one-goal lead late on.`:`${sc} up and the game is won. Enjoy it.`);}
   else if(min>=70&&d<0)L.push(`You need a goal: ${sc} down.`);else if(min>=70&&d===0)L.push(`Still ${sc}. Someone needs to make something happen.`);
@@ -3757,12 +3956,53 @@ function bpResolveSpecial(c,min,o,s,S,O,x,me,b){const m=min+.5,kpP=(O.L.find(y=>
     if(scored){goal(s,x,null);c.bpAdj+=.15+(pan?.25:0);if(pan&&isBP())bpF().chip=1;const d=c.g[s]-c.g[1-s];big=min>=80&&d===0?"⚽ LATE EQUALISER!":min>=80&&d===1?"⚽ LATE WINNER!":"⚽ PENALTY!";if(min>=80&&d<=1&&d>=0)c.bpAdj+=.25;}else c.bpAdj-=.25;
     return {txt,big,ok:scored};}
   return {txt:"",big:"",ok:false};}
-function bpPlayMoment(el,c,t,mom,label,done){el.innerHTML=bpCardHTML(c,mom,label);el.querySelectorAll("[data-bpm]").forEach(bt=>bt.addEventListener("click",()=>{const r=bpResolve(c,t,mom.o[+bt.dataset.bpm]);try{if(r.big&&(r.big.includes("GOAL")||r.big.includes("ASSIST")||r.big.includes("LATE")))SFX.goal&&SFX.goal();}catch(x){}
+function bpPlayMoment(el,c,t,mom,label,done){el.innerHTML=bpCardHTML(c,mom,label);if(!el.querySelector(".tbrt")){const hn=el.querySelector(".tbhint");if(hn)hn.remove();}let sel=-1;el.querySelectorAll("[data-bpm]").forEach(bt=>bt.addEventListener("click",()=>{const i=+bt.dataset.bpm;if(sel!==i&&el.querySelector(".tbrt")){sel=i;el.querySelectorAll(".tbopt").forEach(b2=>b2.classList.toggle("sel",+b2.dataset.bpm===i));el.querySelectorAll(".tbrt").forEach(g2=>g2.classList.toggle("on",+g2.dataset.r===i));const hn=el.querySelector(".tbhint");if(hn)hn.textContent="Tap again to go";return;}const r=bpResolve(c,t,mom.o[i]);try{if(r.big&&(r.big.includes("GOAL")||r.big.includes("ASSIST")||r.big.includes("LATE")))SFX.goal&&SFX.goal();}catch(x){}
     if(r.follow&&bpOnPitch(c)){el.innerHTML=bpOutHTML(c,r,true);el.querySelector("[data-bpgo]").addEventListener("click",()=>bpPlayMoment(el,c,t,r.follow,"",done));return;}
     el.innerHTML=bpOutHTML(c,r);el.querySelector("[data-bpgo]").addEventListener("click",done);}));}
-function bpCardHTML(c,mom,label){const T0=team(c.h),T1=team(c.a);return `<div class="bpmc"><div class="bpmsb"><span>${esc(T0.short)}</span><b>${c.g[0]}–${c.g[1]}</b><span>${esc(T1.short)}</span></div>${label?`<div class="srk" style="text-align:center;margin-top:4px">${label}</div>`:""}
-  <div class="bpmi">${mom.ic}</div><h3>${mom.t}</h3>${mom.ctx?`<p class="bpctx">${esc(mom.ctx)}</p>`:""}<p>${mom.x}</p>${mom.o.map((o,i)=>`<button class="btn ${i?"ghost":""}" data-bpm="${i}"><span>${o.l}</span><small>${o.tag||bpOdds(o.p)}</small></button>`).join("")}</div>`;}
-function bpOutHTML(c,r,more){const T0=team(c.h),T1=team(c.a);return `<div class="bpmc"><div class="bpmsb"><span>${esc(T0.short)}</span><b>${c.g[0]}–${c.g[1]}</b><span>${esc(T1.short)}</span></div>${r.big?`<div class="bpmbig ${r.ok?"ok":"bad"}">${r.big}</div>`:""}<p style="font-size:17px;text-align:center">${esc(r.txt)}</p><button class="btn" data-bpgo="1">${more?"What next? ▶":"Continue"}</button></div>`;}
+function bpZone(c){const x=bpOnPitch(c),r=x?x.role:"CM";return r==="GK"?"gk":["CB","FB"].includes(r)?"def":["CM","DM"].includes(r)?"mid":"att";}
+function bpPitchSVG(z,side){const y={att:18,mid:50,def:80,gk:92}[z]||50,xs=z==="gk"?50:30+Math.random()*40;return `<svg class="bpmpitch" viewBox="0 0 100 64" aria-hidden="true"><rect x="1" y="1" width="98" height="62" rx="3" class="pf"/><line x1="50" y1="1" x2="50" y2="63"/><circle cx="50" cy="32" r="8" fill="none"/><rect x="1" y="18" width="14" height="28" fill="none"/><rect x="85" y="18" width="14" height="28" fill="none"/>
+  <rect x="${z==="att"?70:z==="mid"?35:z==="def"?8:1}" y="1" width="${z==="gk"?16:30}" height="62" class="zone"/><circle cx="${{att:84,mid:50,def:22,gk:8}[z]}" cy="${20+Math.random()*24}" r="3.2" class="me"/><circle cx="${{att:84,mid:50,def:22,gk:8}[z]}" cy="32" r="6" class="ring"/></svg>`;}
+const BP_OIC=o=>o.spot?"🥅":o.gk?"🧤":o.so!==undefined?(o.so<0?"✋":"🎯"):o.f==="dive"?"🎭":({goal:"⚽",assist:"🅰️",chance:"🏃",hold:"💪",intercept:"✋",fkwon:"🎯",keep:"✅",block:"🛡️",tackle:"🛡️",save:"🧤",foul:"🟨",penwon:"🎭"}[o.w]||"▶");
+const BP_RC=["#c98cf0","#5aa0e8","#4fd1c5","#f28dbb","#f5a35c","#a3e635"];
+function bpOptPct(c,o){const x=bpOnPitch(c),me=x?x.p:bpMe(),b=state.bp||{};if(!me)return Math.round((o.p||0)*100);const A=q=>pAttr(me,q),cmp=(b.mor-50)/500+(b.temp>15?.03:b.temp<-15?-.03:0);
+  const O=c.S[1-bpSide(c)],kpP=(O.L.find(y=>y.role==="GK"&&y.p)||{}).p,kqA=((kpP?pAttr(kpP,"RDG"):60)-60)/600;
+  if(o.so!==undefined)return o.so<0?100:Math.round((b.trust>=60?1:b.trust/100)*100);
+  if(o.spot){const k=o.spot,pr=c.bpSO&&c.bpSO.slot===5?.04:0,onT=clamp((k[0]==="T"?.62+A("SKL")/350:k==="BL"||k==="BR"?.78+A("SKL")/450:k==="C"?.95:.68+A("SKL")/400)+cmp-pr,.4,.98);
+    const sv=k==="PAN"?.15*.95:k==="C"?.15*(.9+kqA)+.85*.1:.425*((k[0]==="T"?.22:.62)+kqA);return Math.round(onT*(1-clamp(sv,0,.95))*100);}
+  if(o.gk){const miss=o.gk==="MG"?.14:.08,sv=o.gk==="MG"?.14+A("RDG")/700:(o.gk==="C"?.2*.75:.4*.5)+A("RDG")/700;return Math.round((miss+(1-miss)*clamp(sv,0,.95))*100);}
+  return Math.round(clamp(o.p||0,0,1)*100);}
+const bpPctCls=v=>v>=60?"g":v>=35?"a":"r";
+function bpBoard(c,mom){const ws=mom.o.map(o=>o.w),pen=mom.o.some(o=>o.spot||o.so!==undefined),gkp=mom.o.some(o=>o.gk);const R=(i)=>BP_RC[i%BP_RC.length],L=i=>String.fromCharCode(65+i);
+  const tag=(x,y,i)=>`<circle cx="${x}" cy="${y}" r="9" fill="${R(i)}"/><text x="${x}" y="${y+4.5}" text-anchor="middle" class="tbl">${L(i)}</text>`;
+  const dot=(x,y,cl,r=5)=>`<circle cx="${x}" cy="${y}" r="${r}" class="${cl}"/>`,me=(x,y)=>`<circle cx="${x}" cy="${y}" r="11" class="tbring"/>${dot(x,y,"tbme",6)}`;
+  const path=(d,i)=>`<path d="${d}" stroke="${R(i)}" class="tbr"/>`,grp=(i,inner)=>`<g class="tbrt" data-r="${i}">${inner}</g>`;
+  if(pen||gkp){const pts={TL:[96,30],TR:[204,30],BL:[96,66],BR:[204,66],C:[150,60],PAN:[150,24],L:[100,52],R:[200,52],MG:[150,40]};let s=`<rect x="70" y="14" width="160" height="66" class="tbgoal"/><line x1="70" y1="80" x2="230" y2="80" class="tbline"/>`;
+    s+=gkp?`${me(150,64)}${dot(150,128,"tbopp",6)}${dot(150,108,"tbball",3.5)}`:`${dot(150,62,"tbopp",7)}${me(150,128)}${dot(150,108,"tbball",3.5)}`;
+    mom.o.forEach((o,i)=>{const k=o.spot||o.gk;if(!k){if(o.so!==undefined)s+=tag(110+i*40,138,i);return;}const [tx,ty]=pts[k]||[150,40],sx=150,sy=gkp?64:108;s+=grp(i,path(o.gk==="C"?`M${sx} ${sy} L150 ${sy-6}`:`M${sx} ${sy} Q${(sx+tx)/2} ${Math.min(sy,ty)-(k==="PAN"?30:10)} ${tx} ${ty}`,i)+tag(tx,ty,i));});
+    return `<svg class="tboard" viewBox="0 0 300 150" aria-hidden="true"><image href="${pixelURL(100,50,{land:true,lines:false})}" x="0" y="0" width="300" height="150" preserveAspectRatio="none" class="pxim"/>${s}</svg>`;}
+  const xme=bpOnPitch(c),isGK=!!(xme&&xme.role==="GK"),def=!isGK&&ws.some(w=>w==="block"||w==="tackle"||w==="foul")&&!ws.includes("goal"),gk=isGK||ws.includes("save");const rnd=(a,s=12)=>a+Math.round((Math.random()-.5)*s);let s="";
+  const route=(i,x1,y1,x2,y2,bend,zig)=>{const mx=(x1+x2)/2,my=(y1+y2)/2,dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy)||1,cx=mx-dy/len*bend,cy=my+dx/len*bend,t=[.5,.66,.4,.75,.58][i%5],
+      tx=(1-t)*(1-t)*x1+2*(1-t)*t*cx+t*t*x2,ty=(1-t)*(1-t)*y1+2*(1-t)*t*cy+t*t*y2;
+    const d=zig?`M${x1} ${y1} l10 -7 l10 7 l10 -7 l10 7 L${x2} ${y2}`:`M${x1} ${y1} Q${cx.toFixed(1)} ${cy.toFixed(1)} ${x2} ${y2}`;return grp(i,path(d,i)+tag(Math.round(zig?(x1+x2)/2+8:tx),Math.round(zig?(y1+y2)/2-10:ty),i));};
+  const rush=o=>/rush|sprint|come|close|charge|out of your box|slide/i.test(o.l);
+  if(gk){const yx=14,yy=75,ax=rnd(118),ay=rnd(72,20);s+=`${dot(ax,ay,"tbopp",6)}${dot(ax-9,ay,"tbball",3.5)}${dot(rnd(160),rnd(35),"tbopp")}${dot(rnd(70),rnd(120),"tbmate")}${me(yx,yy)}`;
+    let dv=0,sh=0;mom.o.forEach((o,i)=>{if(o.w==="save"&&rush(o))s+=route(i,yx,yy,ax-14,ay,i%2?-14:14);else if(o.w==="save"){const up=dv++%2===0;s+=route(i,yx,yy,yx+4,up?52:98,up?18:-18);}else if(o.w==="block")s+=route(i,yx,yy,ax-20,ay+10,12);else if(o.w==="assist")s+=route(i,yx,yy,Math.min(250,rnd(215,40)),i%2?rnd(36):rnd(114),-18);else{const up=sh++%2===0;s+=route(i,yx,yy,rnd(58),up?rnd(32):rnd(118),up?10:-10);}});}
+  else if(def){const yx=rnd(150),yy=rnd(104,16),ax=rnd(96),ay=rnd(60,20);s+=`${dot(12,75,"tbmate")}${dot(ax,ay,"tbopp",6)}${dot(ax-9,ay,"tbball",3.5)}${dot(rnd(170),rnd(36),"tbopp")}${dot(rnd(70),rnd(128),"tbmate")}${me(yx,yy)}`;
+    mom.o.forEach((o,i)=>{if(o.w==="tackle")s+=route(i,yx,yy,ax+6,ay+6,18);else if(o.w==="block")s+=route(i,yx,yy,ax-26,ay+18+i*6,-16);else if(o.w==="foul")s+=route(i,yx,yy,ax+4,ay-8,-26);else if(["keep","assist","chance","intercept"].includes(o.w))s+=route(i,yx,yy,rnd(220),i%2?28:122,12);else s+=route(i,yx,yy,ax-10,ay+30,10);});}
+  else{const mid=bpZone(c)==="mid",yx=mid?rnd(130):rnd(165),yy=rnd(75,30),mx=Math.min(240,yx+rnd(55)),my=yy>75?rnd(30):rnd(122),bx=Math.max(30,yx-rnd(70)),by=yy>75?rnd(122):rnd(30);
+    s+=`${dot(284,75,"tbkp",5)}${dot(rnd(244),rnd(50),"tbopp")}${dot(rnd(246),rnd(102),"tbopp")}${mid?dot(rnd(180),rnd(75),"tbopp"):""}${dot(mx,my,"tbmate")}${dot(bx,by,"tbmate")}${me(yx,yy)}${dot(yx+9,yy,"tbball",3.5)}`;
+    let g=0,z=0;mom.o.forEach((o,i)=>{if(o.w==="goal"){const ty=[64,86,75][g%3];s+=route(i,yx,yy,290,ty,o.bn?-(30+g*6):(g%2?10:-10));g++;}
+      else if(o.w==="assist")s+=route(i,yx,yy,mx,my,i%2?12:-12);else if(o.w==="keep")s+=route(i,yx,yy,bx,by,10);
+      else{const up=z++%2===0;s+=route(i,yx,yy,Math.min(255,yx+52),yy+(up?-22:22),0,true);}});}
+  return `<svg class="tboard" viewBox="0 0 300 150" aria-hidden="true"><image href="${pixelURL(100,50,{land:true})}" x="0" y="0" width="300" height="150" preserveAspectRatio="none" class="pxim"/>${s}</svg>`;}
+function bpCardHTML(c,mom,label){const T0=team(c.h),T1=team(c.a),mm=(String(mom.x).match(/^(\d+)′\.\s*/)||[]),body=mm.length?String(mom.x).slice(mm[0].length):mom.x,min=mm[1]||"";
+  return `<div class="bpmc tvm tbcard"><div class="tvbar"><span class="tvmin">${min?min+"′":"KEY"}</span><span class="tvteam">${crestSVG(T0,20)}${esc(T0.short)}</span><b class="tvsc">${c.g[0]}–${c.g[1]}</b><span class="tvteam">${esc(T1.short)}${crestSVG(T1,20)}</span></div>
+    <div class="tbhead"><span class="tbic">${mom.ic}</span><div style="min-width:0"><div class="tvtag">● ${esc(label||"Key moment")}</div><h3 class="tvtitle">${mom.t}</h3></div></div>
+    ${mom.ctx?`<div class="tvctx">${esc(mom.ctx)}</div>`:""}
+    ${bpBoard(c,mom)}<p class="tbx">${body}</p>
+    <div class="tbopts">${mom.o.map((o,i)=>{const v=bpOptPct(c,o),k=bpPctCls(v);return `<button class="tbopt" data-bpm="${i}" style="--d:${.2+i*.07}s"><span class="tbL" style="background:${BP_RC[i%BP_RC.length]}">${String.fromCharCode(65+i)}</span><span class="tbol"><b>${o.l}</b>${o.tag?`<small>${o.tag}</small>`:""}${o.ab?`<small class="tbab">✨ ${esc(o.ab)}</small>`:""}</span><span class="tbpct ${k}"><b>${v}%</b><i><u style="width:${v}%"></u></i></span></button>`;}).join("")}</div><p class="tbhint">Tap an option to see its route. Tap it again to go.</p></div>`;}
+function bpOutHTML(c,r,more){const T0=team(c.h),T1=team(c.a);return `<div class="bpmc tvm tvout ${r.ok?"good":"bad"}"><div class="tvbar"><span class="tvmin">LIVE</span><span class="tvteam">${crestSVG(T0,20)}${esc(T0.short)}</span><b class="tvsc pulse">${c.g[0]}–${c.g[1]}</b><span class="tvteam">${esc(T1.short)}${crestSVG(T1,20)}</span></div>
+  <div class="tvflash"></div>${r.big?`<div class="bpmbig ${r.ok?"ok":"bad"} tvbig">${r.big}</div>`:`<div class="tvres">${r.ok?"✅":"❌"}</div>`}<p class="tvtxt">${esc(r.txt)}</p><button class="btn" data-bpgo="1">${more?"What next? ▶":"Continue"}</button></div>`;}
 function bpMomentsOnly(c,label,done){c.auto=true;c.bpPlan=bpPlan();c.bpAdj=0;let t=0,n=0;const el=document.createElement("div");el.className="bpmo";document.body.appendChild(el);
   const fin=()=>{if(c.ko&&c.g[0]===c.g[1]&&!c.pen)c.pen=shootout(activeL(c,0),activeL(c,1));const m=finalizeCtx(c);el.remove();done(m);};const end=()=>{runCtx(c,t,90);if(c.ko&&c.g[0]===c.g[1]){c.et=true;runCtx(c,90,120);if(c.g[0]===c.g[1]&&bpOnPitch(c)){bpPlayMoment(el,c,120,bpSOcard(),"Extra time is over",fin);return;}}fin();};
   const next=()=>{while(c.bpPlan.length){const mn=c.bpPlan.shift();runCtx(c,t,mn);t=mn;const mom=bpMoment(c,mn);if(!mom)continue;n++;bpPlayMoment(el,c,t,mom,label,next);return;}
@@ -3874,7 +4114,7 @@ const rivChance=x=>RIV_CH[x.pot||3]*(1+(x.wk||0)*.08);
 const rivTag=x=>{const c=rivChance(x);return c>=.1?`<span class="tag" style="background:#c0392b;color:#fff">👀 High rival interest</span>`:c>=.04?`<span class="tag" style="background:#d68910;color:#fff">👀 Some rival interest</span>`:`<span class="tag">👀 Low rival interest</span>`;};
 function rivalTick(){if(!state.sd||state.phase!=="season")return;const d=state.sd,gone=[];d.list=d.list.filter(x=>{x.wk=(x.wk||0)+1;if(Math.random()<rivChance(x)){const t=pick(state.ai);gone.push([x,t?t.name:"A rival"]);return false;}return true;});
   gone.forEach(([x,c])=>{const t=`${c}’s academy signed ${BY[x.sp].n} (age ${x.age}) from your prospect list.`;inboxAdd("Squad","🏃","Rivals moved first",t);d.log=[t,...(d.log||[])].slice(0,6);});}
-function ybidTick(){if(state.phase!=="season"||state.ybid)return;const b=state.ybidBack;if(b&&state.md>=b.md){state.ybidBack=null;const p=myPlayers().find(x=>x.id===b.id);if(p&&p.yth){state.ybid={id:p.id,club:b.club,fee:b.fee,back:1};return;}}
+function ybidTick(){if(isBP()||state.phase!=="season"||state.ybid)return;const b=state.ybidBack;if(b&&state.md>=b.md){state.ybidBack=null;const p=myPlayers().find(x=>x.id===b.id);if(p&&p.yth){state.ybid={id:p.id,club:b.club,fee:b.fee,back:1};return;}}
   if((state.ybidN||{})[state.season]>=2)return;const A=acadPlayers().filter(p=>(p.pot||3)>=4);for(const p of A){if(Math.random()<.05){const t=pick(state.ai);state.ybid={id:p.id,club:t?t.name:"A rival",fee:Math.max(3e5,Math.round(valueOf(p)*ri(10,14)/10/1e4)*1e4)};state.ybidN=state.ybidN||{};state.ybidN[state.season]=(state.ybidN[state.season]||0)+1;return;}}}
 /* ---------- loans ---------- */
 const LOAN_MAX=3;
@@ -4129,7 +4369,7 @@ function viewClub0(){
    else if(regOf(0))h+=`<div class="card">${emptyHTML("🕊️","No local rivals this season","Your neighbouring clubs are in the other division. Derbies return when you share a division again.")}</div>`;}
   S.rv=h;h="";
   h+=recordsHTML();
-  if((state.awards||[]).length)h+=`<h2>Awards history</h2><div class="card" style="padding:2px 14px">`+[...state.awards].reverse().map(a=>`<div class="res" style="grid-template-columns:32px 1fr auto;gap:8px"><span class="small muted">S${a.season}</span><span class="small"><b>${esc(NP.lists?a.pots.nick:a.pots.sp)}</b> ${esc(a.pots.club)}${a.mgr.i===0&&a.mgr.club===state.club.name?" · 📋 You":""}</span><button class="chip" data-act="awview" data-s="${a.season}">View</button></div>`).join("")+`</div>`;
+  if((state.awards||[]).length)h+=`<h2>Awards history</h2><div class="card" style="padding:2px 14px">`+[...state.awards].reverse().map(a=>`<div class="res" style="grid-template-columns:32px 1fr auto;gap:8px"><span class="small muted">S${a.season}</span><span class="small"><b>${esc(NP.lists?a.pots.nick:a.pots.sp)}</b> ${esc(a.pots.club)}${!isBP()&&a.mgr.i===0&&a.mgr.club===state.club.name?" · 📋 You":""}</span><button class="chip" data-act="awview" data-s="${a.season}">View</button></div>`).join("")+`</div>`;
   S.hi=h;h="";
   const c=state.club,lg=c.logo||{t:"Normal",s:0};
   h+=`<h2>Club identity</h2><div class="card"><div style="display:flex;gap:14px;align-items:center">${crestSVG(c,64)}<div><b style="font-size:18px">${esc(c.name)}</b><br><span class="muted">${esc(c.short)}</span></div></div>
@@ -4155,8 +4395,8 @@ function viewClub0(){
     <label class="lb">Show nicknames in</label><div class="chips" style="margin:0">${[["pitch","Squad & pitch"],["lists","Lists & tables"],["match","Matches"],["news","News"]].map(([k,l])=>`<button class="chip ${NP[k]?"on":""}" data-act="nptog" data-k="${k}" aria-pressed="${NP[k]}">${l}</button>`).join("")}</div>
     <p class="small muted" style="margin:6px 0 0">Where nicknames are off, the Pokémon’s species name is shown instead.</p></div>
   <div class="card"><p class="setg">Gameplay</p><label class="lb" style="margin-top:0">Match intro</label><div class="segs" role="radiogroup"><button class="seg ${introQuick?"on":""}" data-act="introset" data-v="all">Every match</button><button class="seg ${introQuick?"":"on"}" data-act="introset" data-v="watched">Watched only</button></div>
-    <label class="lb">Wage budget</label><div class="segs" style="margin:0" role="radiogroup">${[[.6,"Tight 60%"],[.7,"Standard 70%"],[.85,"Generous 85%"]].map(([v,l])=>`<button class="seg ${Math.abs(wPct()-v)<.01?"on":""}" data-act="wpct" data-v="${v}">${l}</button>`).join("")}</div><p class="small muted" style="margin:6px 0 10px">How much of your club’s revenue can go on wages. Tight is the classic challenge, Generous makes long careers easier.</p>
-    <label class="lb">How you sign players</label><div class="segs" role="radiogroup">${[["free","Free pick"],["draft","Pick from 3"],["spin","Spinner"]].map(([m,l])=>`<button class="seg ${state.mode===m?"on":""}" data-act="setmode" data-m="${m}">${l}</button>`).join("")}</div>
+    ${isBP()?"":`<label class="lb">Wage budget</label><div class="segs" style="margin:0" role="radiogroup">\${[[.6,"Tight 60%"],[.7,"Standard 70%"],[.85,"Generous 85%"]].map(([v,l])=>\`<button class="seg \${Math.abs(wPct()-v)<.01?"on":""}" data-act="wpct" data-v="\${v}">\${l}</button>\`).join("")}</div><p class="small muted" style="margin:6px 0 10px">How much of your club’s revenue can go on wages. Tight is the classic challenge, Generous makes long careers easier.</p>
+    <label class="lb">How you sign players</label><div class="segs" role="radiogroup">\${[["free","Free pick"],["draft","Pick from 3"],["spin","Spinner"]].map(([m,l])=>\`<button class="seg \${state.mode===m?"on":""}" data-act="setmode" data-m="\${m}">\${l}</button>\`).join("")}</div>`}
     <label class="lb">Tips</label><div class="segs" role="radiogroup"><button class="seg ${TIPS_ON?"on":""}" data-act="tipset" data-v="on">On</button><button class="seg ${TIPS_ON?"":"on"}" data-act="tipset" data-v="off">Off</button></div><button class="btn ghost" data-act="tipset" data-v="on" data-reset="1">Show tips again</button></div>
   <div class="card"><p class="setg">Save and data</p><p class="small muted" style="margin:0 0 8px">Your franchise is saved on this device. Keep a backup file somewhere safe, or use it to move to another device.</p>
     <button class="btn" data-act="savefile">Save backup file</button><label class="btn ghost filebtn">Load backup file<input type="file" id="loadfile" accept=".ppsave,.txt,.json,text/plain" hidden></label>
@@ -4164,11 +4404,11 @@ function viewClub0(){
     <textarea id="savecode" readonly></textarea>
     <textarea id="loadcode" placeholder="Paste a save code here" style="margin-top:8px"></textarea>
     <button class="btn ghost" data-act="import">Load save</button></details>
-    <button class="btn ghost" data-act="slots">Switch franchise</button>
+    <button class="btn ghost" data-act="slots">${isBP()?"Switch save":"Switch franchise"}</button>
     <button class="btn ghost" data-act="logout">Log out</button></div>
-  <div class="card dz"><p class="setg">Danger zone</p><button class="btn danger" data-act="reset">Delete franchise and start over</button></div>`;
+  <div class="card dz"><p class="setg">Danger zone</p><button class="btn danger" data-act="reset">${isBP()?"Delete this career and start over":"Delete franchise and start over"}</button></div>`;
   {const k=h.indexOf("<h2>Settings</h2>");S.se=k>0?h.slice(k)+h.slice(0,k):h;}
-  S.st=staffHTML();const tabs=[["ov","Career"],["hi","History"],["st","Staff"],["rv","Rivals"],["id","Identity"],["se","Settings"]];if(!S[clubSec])clubSec="ov";
+  S.st=staffHTML();let tabs=[["ov","Career"],["hi","History"],["st","Staff"],["rv","Rivals"],["id","Identity"],["se","Settings"]];if(isBP()){S.ov=bpCareerHTML();delete S.st;delete S.id;tabs=tabs.filter(([k])=>S[k]);}if(!S[clubSec])clubSec="ov";
   return `<div class="segs tight" role="tablist">${tabs.map(([k,l])=>`<button class="seg ${clubSec===k?"on":""}" data-act="csec" data-k="${k}" role="tab" aria-selected="${clubSec===k}">${l}</button>`).join("")}</div>`+S[clubSec];
 }
 function clubPickHTML(){if(!setup.world){setup.world=genWorld();setup.reg=setup.reg||1;setup.pick=0;}setup.lg=regionFull(setup.reg);setup.preview=setup.lg[setup.div===2?"d2":"d1"];setup.preview.forEach(c=>{if(!c.staff)c.staff=genStaff(c.base||70);});
@@ -4239,7 +4479,7 @@ function applyClubTheme(){const r=document.documentElement.style,on=clubTheme&&s
   if(!on){["--accent","--accent-ink","--club","--club2"].forEach(k=>r.removeProperty(k));return;}
   const a=clubAccent(),c1=HEX.test(state.club.color||"")?state.club.color:a,c2=HEX.test(state.club.color2||"")?state.club.color2:autoC2(c1);
   r.setProperty("--accent",a);r.setProperty("--accent-ink",autoC2(a));r.setProperty("--club",c1);r.setProperty("--club2",c2);}
-function render(){if(state&&state.cidV!==1){try{applyCID();}catch(x){}}if(isBP()&&(tab==="squad"||tab==="market"||tab==="scout"))tab="me";if(SND.amb&&!document.querySelector(".liveov"))ambStop();applyClubTheme();setTimeout(fixBrackets,0);
+let _pxSet=false;function render(){if(!_pxSet){_pxSet=true;applyPixelPitchCSS();}if(state&&state.cidV!==1){try{applyCID();}catch(x){}}if(state&&state.bp){try{bpRescue();}catch(x){}}if(isBP()&&(tab==="squad"||tab==="market"||tab==="scout"))tab="me";if(SND.amb&&!document.querySelector(".liveov"))ambStop();applyClubTheme();setTimeout(fixBrackets,0);
   const app=document.getElementById("app");
   if(!loggedIn){app.innerHTML=viewLogin();document.getElementById("sheet").innerHTML="";return;}
   if(view==="chal"&&chal){app.innerHTML=viewChal();renderSheet();return;}
@@ -4306,7 +4546,7 @@ function renderSheet(){setTimeout(fixBrackets,0);
       <div class="tat">${["PAC","POW","SKL","TKL","RDG","STA"].map(k=>`<div class="${ka.includes(k)?"key":""}"><b>${pAttr(p,k)}</b><span>${k}</span></div>`).join("")}</div></div>
       <p class="small" style="margin:10px 0 0"><b>${esc(p.ab||"")}:</b> <span class="muted">${esc((ABIL[p.ab]||{}).d||"")}${abilText(p.ab)}</span></p>
       ${p.inj?`<p class="small" style="color:var(--loss);margin-top:10px">${esc(p.injN||"Injured")}: out for ${p.inj} more match${p.inj===1?"":"es"}.</p>`:""}
-      ${evoInfo(p)?`<p class="small" style="margin:8px 0 0">✨ ${esc(evoInfo(p))}</p>`:""}
+      ${evoInfo(p)?`<p class="small" style="margin:8px 0 0">✨ ${esc(evoInfo(p))}</p>`:""}<!--bpcut-->
       ${state.items&&state.items.candy>0?`<button class="btn ghost" data-act="candy" style="margin-top:10px">🍬 Use a Rare Candy (+1 level step). You have ${state.items.candy}</button>`:""}
       ${p.yth?`<div class="ctr">🎓 <b>Youth academy.</b> Can’t play until 18 (age ${p.age} now). Train a position below so they’re ready.</div>`:""}
       ${canVit(p)?(()=>{const cur=p.vt&&p.vt.k,ev=p.ev||{},inv=(state.items&&state.items.vit)||{};const c=cur?vitCoach(p,cur):null;
@@ -4323,6 +4563,8 @@ function renderSheet(){setTimeout(fixBrackets,0);
       ${p.yth?"":`<label class="lb">Move to</label>`}<div class="mv">${targets.map(([z,k,l])=>{const o=zarr(z)[k];return `<button data-act="move" data-z="${z}" data-i="${k}">${l}<br><span class="muted">${o?esc(nn(o,"pitch")):"empty"}</span></button>`;}).join("")}</div>
       ${loanCanSend(p,sheet.z)?`<button class="btn ghost" data-act="loanopen" style="margin-top:12px">Send on loan</button>`:isRegion()&&p&&!p.yth&&p.age<=23&&(sheet.z==="b"||sheet.z==="r")?`<p class="small muted" style="margin:10px 0 0">${(state.loans||[]).length>=LOAN_MAX?`You already have ${LOAN_MAX} players on loan.`:"Loans can be arranged while the transfer window is open."}</p>`:""}
       ${state.phase==="build"&&state.signingsLeft!==0?`<button class="btn danger" data-act="release" style="margin-top:16px">Release ${esc(nn(p,"lists"))}</button>`:""}`;
+    if(isBP()&&body.includes("<!--bpcut-->")){body=body.split("<!--bpcut-->")[0]+(p.me?`<p class="small muted" style="margin:12px 0 6px">Contracts, training plans and team selection are up to your manager. Your own career choices live on the Me tab.</p><button class="btn ghost" data-act="bppos">🔄 Learn a new position</button><label class="lb" for="rn">Nickname</label><input type="text" id="rn" maxlength="16" value="${esc(p.nick)}"><button class="btn ghost" data-act="rename">Save nickname</button>`
+      :`<p class="small muted" style="margin:12px 0 0">You’re a player here: contracts, training and team selection are up to your manager.</p>`);}
   }}else if(sheet.type==="match"){
     const m=(state.results[sheet.md]||[]).find(x=>x&&(x.h===0||x.a===0));title=`Matchday ${sheet.md+1}`;body=m?matchCentre(m):"";
   }else if(sheet.type==="pom"){const m=state.po.rounds[sheet.r][sheet.i];title=`Playoff ${PO_NAMES[sheet.r].toLowerCase().replace(/s$/,"")}`;body=matchCentre(m);
@@ -4522,6 +4764,7 @@ document.addEventListener("input",e=>{
 });
 document.addEventListener("click",e=>{
   const el=e.target.closest("[data-act]");if(!el)return;let a=el.dataset.act;
+  if(isBP()&&["rlen","rwm","talk","train","move","wpct","setmode","release","candy","vfocus","vuse","sell","fasign","buy","bid","subs","tact","form","ment"].includes(a)){toast("You’re a player: the manager handles that.");return;}
   if(state&&["watch","play","bpkm"].includes(a)){const g=nextGame();if(g&&g.acts[a])a=g.acts[a];}
   if(isBP()&&["play","watch","cuplay","cuwatch","poplay","powatch","posim","simall","chwatch","chplay","bpkm","pokm","cukm"].includes(a))bpPickXI();
   if(a==="ovclose"&&e.target!==el)return;
@@ -4753,6 +4996,9 @@ document.addEventListener("click",e=>{
       const ci=d.pool.find(p=>p.id===d.chosen);if(!ci)break;if(BY[ci.sp].L&&legCount()>=LEG_CAP){toast(`You already have ${LEG_CAP} Legendaries.`);break;}
       userDraftPick(d.chosen,z,k);if(state.phase!=="fantasy")toast("Draft complete. Check your squad, then kick off.");render();window.scrollTo(0,0);break;}
     case "theme":applyTheme(el.dataset.th);render();break;
+    case "iconset":try{localStorage.setItem("pokefc_icons",el.dataset.v);}catch(e){}render();if(sheet)renderSheet();break;
+    case "skin":try{localStorage.setItem("pokefc_skin",el.dataset.sk);}catch(e){}applySkin();render();if(sheet)renderSheet();break;
+    case "pxnight":try{localStorage.setItem("pokefc_pxnight",el.dataset.pn);}catch(e){}applySkin();render();if(sheet)renderSheet();break;
     case "themeq":applyTheme(isDark()?"light":"dark");render();break;
     case "setmode":state.mode=el.dataset.m;state.offers={};if(state.respins===undefined)state.respins=SPIN_RESPINS;save();render();break;
     case "spin":if(spinning)break;runSpin(renderSheet,res=>{state.offers[sheet.z+sheet.i]=res;save();renderSheet();});break;
@@ -4835,13 +5081,22 @@ if("serviceWorker" in navigator&&(location.protocol==="https:"||location.hostnam
     <div class="sp-tap">Tap to start</div>`;
   document.body.appendChild(el);let gone=false;const done=()=>{if(gone)return;gone=true;el.classList.add("out");setTimeout(()=>el.remove(),450);};
   el.addEventListener("click",done);setTimeout(done,reduce?1400:3800);})();
-(function(){const bases=["sprites/","pokemon/","sprites/pokemon/",""];
+(function(){const bases=["BW/","bw/","sprites/","pokemon/","sprites/pokemon/",""];
   const tryImg=src=>new Promise(r=>{const im=new Image();im.onload=()=>r(true);im.onerror=()=>r(false);im.src=src;});
   const loadIds=async()=>{if(DEXID&&Object.keys(DEXID).length>400)return true;try{const res=await fetch("https://pokeapi.co/api/v2/pokemon-species?limit=1100");if(!res.ok)return false;
     const j=await res.json(),m={};(j.results||[]).forEach(x=>{const id=+String(x.url).split("/").filter(Boolean).pop();if(id)m[x.name]=id;});
     if(Object.keys(m).length<400)return false;DEXID=m;try{localStorage.setItem("pokefc_dexids",JSON.stringify(m));}catch(e){}return true;}catch(e){return false;}};
   (async()=>{for(const b of bases){if(await tryImg(b+"1.png")){if(await loadIds()){SPR_MODE="num";SPR_BASE=b;SPRITES=true;render();}return;}}
-    if(await tryImg("sprites/bulbasaur.png")){SPR_MODE="name";SPRITES=true;render();}})();})();
+    if(await tryImg("sprites/bulbasaur.png")){SPR_MODE="name";SPRITES=true;render();return;}
+    for(const zn of ["BW.zip","bw.zip","sprites.zip"]){try{const res=await fetch(zn);if(!res.ok)continue;const z=await readSpriteZip(new Uint8Array(await res.arrayBuffer()));if(!z||!Object.keys(z.n).length)continue;if(await loadIds()){window.ZIPSPR=z;SPR_MODE="zip";SPRITES=true;render();}return;}catch(e){}}})();})();
+async function readSpriteZip(b){if(typeof DecompressionStream==="undefined")return null;const dv=new DataView(b.buffer,b.byteOffset,b.byteLength);let e=-1;for(let i=b.length-22;i>=Math.max(0,b.length-70000);i--)if(dv.getUint32(i,true)===0x06054b50){e=i;break;}if(e<0)return null;
+  const cnt=dv.getUint16(e+10,true);let p=dv.getUint32(e+16,true);const td=new TextDecoder(),out={n:{},s:{}},jobs=[];
+  for(let k=0;k<cnt&&dv.getUint32(p,true)===0x02014b50;k++){const meth=dv.getUint16(p+10,true),csz=dv.getUint32(p+20,true),nl=dv.getUint16(p+28,true),xl=dv.getUint16(p+30,true),cl=dv.getUint16(p+32,true),off=dv.getUint32(p+42,true),name=td.decode(b.subarray(p+46,p+46+nl));p+=46+nl+xl+cl;
+    const m=name.replace(/\\/g,"/").match(/^(?:[^\/]+\/)?(shiny\/)?(\d+)\.(png|gif)$/i);if(!m||name.includes("__MACOSX"))continue;
+    jobs.push(async()=>{const ln=dv.getUint16(off+26,true),lx=dv.getUint16(off+28,true),st=off+30+ln+lx,raw=b.subarray(st,st+csz);let data=raw;
+      if(meth===8){const ds=new DecompressionStream("deflate-raw");data=new Uint8Array(await new Response(new Blob([raw]).stream().pipeThrough(ds)).arrayBuffer());}else if(meth!==0)return;
+      out[m[1]?"s":"n"][+m[2]]=URL.createObjectURL(new Blob([data],{type:m[3].toLowerCase()==="gif"?"image/gif":"image/png"}));});}
+  for(let i=0;i<jobs.length;i+=64)await Promise.all(jobs.slice(i,i+64).map(f=>f()));return out;}
 </script>
 </body>
 </html>
