@@ -172,7 +172,7 @@ tr.me td:first-child{color:var(--ink)}
 .places button b{display:block;font:800 24px "Big Shoulders Display",Impact,sans-serif}
 .places button.fit{border-color:var(--win)}
 .best{display:grid;grid-template-columns:24px 1fr auto;gap:8px;padding:7px 0;border-top:1px solid var(--line);font-size:14px;text-align:left}
-.disc .spr{width:150%;height:150%;object-fit:contain;image-rendering:pixelated;margin-top:-12px}
+.disc .spr{width:188%;height:188%;object-fit:contain;image-rendering:pixelated;margin-top:-20px}
 .disc .rb{position:absolute;bottom:-5px;left:-8px;min-width:22px;height:18px;padding:0 3px;border-radius:9px;background:rgba(10,20,14,.85);color:#fff;font:800 13px/18px "Big Shoulders Display",Impact,sans-serif;text-align:center}
 img.spr{image-rendering:pixelated;object-fit:contain;flex:none}
 .feed{display:grid;grid-template-columns:40px 1fr auto;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}
@@ -825,8 +825,10 @@ html[data-skin="pixel"] .mtag{border-radius:3px}
 .pxspr{image-rendering:pixelated;image-rendering:crisp-edges;object-fit:contain}
 .disc:has(img.spr){transition:background .2s}
 html:not([data-tokbg="type"]) .disc:has(img.spr){border-color:transparent;box-shadow:none}
-html[data-tokbg="none"] .disc:has(img.spr){background:transparent}html[data-tokbg="none"] .disc img.spr{width:175%;height:175%;margin-top:-18px;filter:drop-shadow(0 2px 0 rgba(0,0,0,.35))}
+html[data-tokbg="none"] .disc:has(img.spr){background:transparent}html[data-tokbg="none"] .disc img.spr{width:219%;height:219%;margin-top:-30px;filter:drop-shadow(0 2px 0 rgba(0,0,0,.35))}
 html[data-tokbg="light"] .disc:has(img.spr){background:#f4f6f8e6}html[data-tokbg="dark"] .disc:has(img.spr){background:#15181fe6}
+.lur:has(img.pxspr,img.spr){grid-template-columns:54px 1fr 44px 92px}.lur>img{justify-self:center}
+.tok>:not(.disc){position:relative;z-index:3}.tok .disc{z-index:1}
 </style>
 </head>
 <body>
@@ -1772,7 +1774,7 @@ const FORM_PRE=/^(Alolan|Galarian|Hisuian|Paldean|Heat|Wash|Frost|Fan|Mow|Sandy|
 const baseName=n=>n.replace(FORM_PRE,"").replace(FORM_SUF,"");
 function sprSrc(s,sh){if(!SPRITES)return null;if(SPR_MODE==="name")return {a:`sprites/${slug(s.n)}.png`,b:""};if(SPR_MODE==="zip"){const id=DEXID&&DEXID[slug(baseName(s.n))],z=window.ZIPSPR;if(!id||!z||!z.n[id])return null;return sh&&z.s[id]?{a:z.s[id],b:z.n[id]}:{a:z.n[id],b:""};}
   const id=DEXID&&DEXID[slug(baseName(s.n))];if(!id)return null;const n=`${SPR_BASE}${id}.png`;return sh?{a:`${SPR_BASE}shiny/${id}.png`,b:n}:{a:n,b:""};}
-const SPR_UP=1.35;function face(s,sz,sh){const r=sprSrc(s,sh),z=Math.round((sz||24)*SPR_UP),mg=Math.round((z-(sz||24))/2);if(!r&&useSprites()&&s&&s.n)return pxImg(s,z,sh).replace("<img ",`<img style="margin:-${mg}px 0" `);return r?`<img class="spr" src="${r.a}" alt="" width="${z}" height="${z}" style="margin:-${mg}px 0" loading="lazy" data-alt="${r.b}" data-fb="${esc(useSprites()&&s&&s.n?pxImg(s,sz,sh):emblem(s.t[0],sz))}" onerror="if(this.dataset.alt){this.src=this.dataset.alt;this.dataset.alt='';}else this.outerHTML=this.dataset.fb">`:emblem(s.t[0],sz);}
+const SPR_UP=1.69;function face(s,sz,sh){const r=sprSrc(s,sh),z=Math.round((sz||24)*SPR_UP),mg=Math.round((z-(sz||24))/2);if(!r&&useSprites()&&s&&s.n)return pxImg(s,z,sh).replace("<img ",`<img style="margin:-${mg}px 0" `);return r?`<img class="spr" src="${r.a}" alt="" width="${z}" height="${z}" style="margin:-${mg}px 0" loading="lazy" data-alt="${r.b}" data-fb="${esc(useSprites()&&s&&s.n?pxImg(s,sz,sh):emblem(s.t[0],sz))}" onerror="if(this.dataset.alt){this.src=this.dataset.alt;this.dataset.alt='';}else this.outerHTML=this.dataset.fb">`:emblem(s.t[0],sz);}
 function discInner(s,r,sh){const x=sprSrc(s,sh);if(!x&&useSprites()&&s&&s.n)return `<img class="spr pxspr" src="${pxSprite(s,sh)}" alt=""><span class="rb">${r}</span>`;return x?`<img class="spr" src="${x.a}" alt="" data-alt="${x.b}" data-px="${useSprites()&&s&&s.n?pxSprite(s,sh):""}" onerror="if(this.dataset.alt){this.src=this.dataset.alt;this.dataset.alt='';}else if(this.dataset.px){this.src=this.dataset.px;this.dataset.px='';this.classList.add('pxspr');}else this.remove()"><span class="rb">${r}</span>`:r;}
 function emblem(t,sz){sz=sz||22;return `<span class="emb ${DARKTXT.has(t)?"dk":""}" style="--c:${TC[t]};width:${sz}px;height:${sz}px" title="${t}"><svg viewBox="0 0 24 24" style="width:${Math.round(sz*.6)}px;height:${Math.round(sz*.6)}px" aria-hidden="true">${EMB[t]}</svg></span>`;}
 /* spinner: generation + a type that exists in that generation */
